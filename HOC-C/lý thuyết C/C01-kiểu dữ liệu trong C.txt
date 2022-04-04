@@ -10,7 +10,7 @@ các kiểu dữ liệu thông dụng là:
 
 
 
-Định dạng	       Kiểu dữ liệu	      Ý nghĩa
+Định dạng	 Kiểu dữ liệu	      Ý nghĩa
 %c	          char	        ký tự
 %s	          char *	    chuỗi ký tự
 %d	        int, short	    Số nguyên dạng thập phân
