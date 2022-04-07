@@ -1,0 +1,80 @@
+****** CÂU ĐIỀU KIỆN IF- IF ELSE - IF ELSE IF **********
+- Câu lệnh điều kiện if else trong lập trình C
+   >> Cấu trúc 1:
+                if (điều_kiện) {
+                // đoạn code được thực hiện nếu điều kiện đúng
+                }
+
+             ---------------------------------------------
+
+   >>Cấu trúc 2:
+
+                if (điều_kiện) {
+                // đoạn code được thực hiện nếu điều kiện đúng
+                } else {
+                // đoạn code được thực hiện nếu điều kiện sai
+                } 
+
+             ---------------------------------------------
+
+    >>Cấu trúc 3:
+
+                if (điều_kiện_1) {
+                // đoạn code được thực hiện nếu điều kiện 1 đúng
+                } else if (điều_kiện_2) {
+                // đoạn code được thực hiện nếu điều kiện 1 sai và điều kiện 2 đúng
+                } else {
+                // đoạn code được thực hiện nếu điều kiện 1 sai và điều kiện 2 sai
+                } 
+
+
+- CODE VÍ DỤ:
+
+                        // BÀI NÀY ta sẽ tìm hiểu về điều kiện if- if else - if else if
+                        // thông qua các bài tập sau
+
+                        // điều kiện if
+                        #include<stdio.h>
+                        int main(){
+                        /*   int a;
+                            printf("enter the num a: ");
+                            scanf("%d", &a);
+                            printf("\n");
+
+                            if(a>=5){
+                                printf("ban du diem vuot qua ky thi: ");
+                            }
+                            
+                        
+
+
+                        // bai 02 có else 
+                        /* int a;
+                            printf("enter the num a: ");
+                            scanf("%d", &a);
+                            printf("\n");
+
+                            if(a%2==0){
+                                printf("so nhap la so chan");
+                            }else{
+                                printf("so nhap la so le");
+                            }*/
+
+
+                            // bai 03 if else if
+
+                            int a;
+                            printf("enter the num a: ");
+                            scanf("%d", &a);
+                            printf("\n");
+
+                            if(a%2==0){
+                                printf("so ban nhap la chan ");
+                            }else if(a%2==1){
+                                printf("so ban nhap la le");
+                            }
+                            return 0;
+                        }
+
+                            
+
