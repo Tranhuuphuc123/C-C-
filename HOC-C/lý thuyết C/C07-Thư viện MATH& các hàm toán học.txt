@@ -13,28 +13,28 @@ thư viện math.h, là thư viện khai báo để học các hàm toán học 
  ******ví dụ code:
    
 
-         #include<stdio.h>
-         #include<math.h>
-         int main() {
-	int a, b;
+ #include<stdio.h>
+int main(){
+    int a,b;
 
-	printf("ente the value a: ");
-	scanf_s("%d", &a);
-	printf("\n");
+    printf("enter the num a: ");
+    scanf("%d",&a);
+    printf("\n");
 
-	printf("enter the value b: ");
-	scanf_s("%d", &b);
-	printf("\n");
+    printf("enter the num b: ");
+    scanf("%d",&b);
+    printf("\n");
 
+    float lamTron = a/b;
 
-	// ham toan hoc ceil & floor
+    printf("\n ham ceil(a/b): %.2f", ceil(lamTron));
+    printf("\n ham floor(a/b): %.2f", floor(lamTron));
 
-	float lamTron = (float) a / b;
-	printf("ceil(a/b): %.2f \n", ceil(lamTron));
-	printf("floor(a/b): %.2f \n", floor(lamTron));
-	printf("sqrt(a): %.2f",sqrt(a));
+    printf("\n sqrt(a): %.2f", sqrt(a));// sqrt*a) %f vi can bac hai co the xuat hien thap phan
 
-	return 0;
+    printf("\n %d^2: %.0f", a,pow(a,2));// so di pow(a,2) laf %f vi luc nay a da ep kieu sang float
 
-	
+    printf("\n |-%d|: %d", a, abs(-a));
+
+    return 0;
 }
