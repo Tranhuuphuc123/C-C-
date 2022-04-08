@@ -1,0 +1,44 @@
+******Câu lệnh switch case******
+>>Cấu trúc:
+
+
+            switch(case_value) { 
+                case 1: 	
+                        //execute your code 
+                        break;      
+                case n: 	
+                        //execute your code 
+                        break;                
+                default: 	
+                       //execute your code 
+                        break; 
+            } 
+
+
+** Chú ý:
+
+        1) Biểu thức trong lệnh switch phải là kiểu dữ liệu số nguyên, ký tự.
+
+        2) case_value phải là hằng số nguyên hoặc ký tự.
+
+        3) case_value có thể sử dụng trong lệnh switch.
+
+        4) Lệnh break trong switch không bắt buộc.
+
+
+
+>> LỆNH break;
+- Câu lệnh break trong C có hai cách sử dụng như sau:
+
+    + Khi gặp câu lệnh break trong một vòng lặp, vòng lặp bị kết thúc ngay lập tức và câu lệnh kế tiếp sau vòng lặp được thực thi.
+
+    + Lệnh break có thể được sử dụng để kết thúc một case trong câu lệnh switch.
+
+
+
+
+
+>> code ví dụ:
+
+
+    
