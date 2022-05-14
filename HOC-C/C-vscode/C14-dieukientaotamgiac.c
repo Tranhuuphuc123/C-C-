@@ -48,8 +48,6 @@ int main(){
     }
 
 
-
-
     // bai toan xet dieu kien xem 3 canh nhap vao co la mot tam giac khong
 /*
     float a, b, c;

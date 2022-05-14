@@ -1,0 +1,21 @@
+                      ****** CÁCH TRUYỀN THAM SỐ TRONG MẢNG *****
+
+
+
+- Giống như truyền tham số trong hàm, mang array cũng được truyền tham số như hàm
+thông qua ba cách như sau: 
+    + Các tham số chính thức là một con trỏ như sau: học ở phần pointer(con trỏ)
+
+           return_type function(type *arrayname)
+
+    + Các tham số chính thức là một mảng đã định kích cỡ như sau:
+
+           return_type function(type arrayname[size])
+
+    + Các tham số chính thức là một mảng chưa định kích cỡ như sau: (phần được dùng phổ biến)
+
+           return_type function(type arrayname[])  
+
+  
+
+  

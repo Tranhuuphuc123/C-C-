@@ -1,0 +1,78 @@
+Hàm và thủ tục là các chương trình con, vậy chương trình con bao rộng ra của hàm và thủ tục là gì?
+
+>>> KHÁI NIỀM CHƯƠNG TRÌNH CON:
+
+ - k/n: Chương trình chính để dễ quản lý sẽ chia ra nhiều chương trình con và để gọi nó lên thì chỉ cần khai báo qua các tham số khác nhau:
+      + Chương trình con là một chương trình có tên có đầu vào và ra
+      + Có chức năng giải quyết các vấn đề chuyên biệt cho chương trình chính
+      + Được gọi nhiều lần với các tham số khác nhau\
+      + Mục đích sử dụng chính:
+        ++ Tái sử dụng: các chương trình con này được sử dụng rộng rãi mọi nơi nhưng giá trị vẫn không đổi khác ở chỗ là
+        sẽ được gội lại tái sử dụng lại với các tham số khác nhau mà thui.
+        ++ Chia để trị: chia từ chương trình lớn thành các chương trình con để dễ quản lí khi cần thì kết hợp lại.
+----> việc tạo ra các chương trình con sẽ dễ hiểu dễ quản lý và dễ phát hiện lỗi và sữa lỗi hơn.
+
+>> CÓ HAI LOẠI CHƯƠNG TRÌNH CON: LÀ HÀM (FUNCTION) VÀ THỦ TỤC( thủ tục trong C không được quy định)
+  > HÀM(FUNCTION):
+    -Cấu trúc của một hàm:
+
+
+            return_type function_name(parameter list) {
+
+                // body of the function
+                return <giá trị trả về>  // nếu Return_type là kiểu Void thì không cần return.
+
+            }
+
+
+            + trong đó:
+             ++ Return_type: kiểu dữ liệu trả về: int, char, double,  long.... or kiểu không có giá trị Void().
+             ++ Function_name: tên gọi của hàm do người dùng đặt.
+             ++( Parameter list): Một tham số giống như một trình giữ chỗ. Khi một hàm được gọi, bạn chuyển một giá trị cho tham số đó.
+             ++ Body_function: Phần thân hàm chứa một tập hợp các câu lệnh xác định chức năng của hàm.
+
+             ++ ví dụ: 
+                    // hàm tra ve kieu int
+                    int Tong( int x, int y){
+                        return a+b;           // lệnh return trả về giá trị a, b                                       
+                    }
+                    
+                    // goi vao chuong trinh chinh
+                   int main(){
+                        int a, b;            // a, và b là gia trị nhập từ ct chính và sẽ đc gán cho chuong trình con hàm Tong( x= a, y=b).
+                        printf("nhap vao gia tri a: ");
+                        scanf("%d", &a);
+                        printf("nhap vao gia tri b: ");
+                        scanf("%d", &b);
+
+                        // lệnh gọi và truyền hàm tong vao chương trình chính
+                        int sum = Tong(a,b);
+
+                        printf("%d", sum);
+                        return 0; 
+                   }
+
+              
+          > Phạm vi biến (Scope): biến cục bộ và toàn cục--> đi sâu sau
+
+                  vd:
+                  #include<stdio.h>
+                    int i; // bien toàn cục khai báo trc hàm main() và có giá trị dùng chung cho tất cả cũng được gọi la prototype hàm nguyên mẫu
+                    int main()
+                    {
+
+                    }
+                    void thi_du(){
+                      int a =3; // biến cục bộ khai báo sau hàm main và có giá trị riêng và dễ dàng thay đổi sữa lỗi khi cần.
+                    }
+
+
+
+          > Truyền tham số cho Hàm:
+            
+            
+
+
+
+
+
