@@ -18,6 +18,7 @@ int main() {
 	printf("ceil(a/b): %.2f \n", ceil(lamTron));
 	printf("floor(a/b): %.2f \n", floor(lamTron));
 	printf("sqrt(a): %.2f",sqrt(a));
+	printf(" %d^2 = %.0f", a, pow(a, 2));
 
 	return 0;
 

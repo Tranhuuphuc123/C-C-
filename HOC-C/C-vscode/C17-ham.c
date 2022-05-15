@@ -43,7 +43,7 @@ int sochinhphuong(int x);
 
 
     // goi và thực hiện chtrinh hoán vị
-     /*int n, p;
+     int n, p;
      printf("\n enter the n: ");
      scanf("%d",&n);
      printf("\n enter the P: ");
@@ -51,7 +51,7 @@ int sochinhphuong(int x);
 
      printf("------------\n");
 
-    hoanVi(n,p); // vi nó là hàm void không có hàm trả về nên không cần gán kiểu dữ liệu*/
+    hoanVi(n,p); // vi nó là hàm void không có hàm trả về nên không cần gán kiểu dữ liệu
 
 
 
@@ -78,7 +78,7 @@ int sochinhphuong(int x);
 
     // kiểm tra số chính phương
 
-    int n,i;
+   /* int n,i;
     do{
         printf("enter the n: ");
         scanf("%d",&n);
@@ -90,8 +90,7 @@ int sochinhphuong(int x);
         if(soChinhPhuong(i)){
             printf(" %d ", i);
         }
-    }
-
+    }*/
      return 0;
 }
 

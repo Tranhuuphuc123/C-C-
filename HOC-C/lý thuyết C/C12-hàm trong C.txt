@@ -69,6 +69,21 @@ Hàm và thủ tục là các chương trình con, vậy chương trình con bao
 
 
           > Truyền tham số cho Hàm:
+             ***>> Luu Y: 
+             PHÂN BIỆT TRUYỀN THAM CHIẾU VÀ TRUYỀN THAM TRỊ
+
+            TRUYỀN THAM CHIẾU là truyền địa chỉ ô nhớ của biến, do đó khi thay đổi giá trị của biến bên trong phương thức thì giá trị của biến 
+            cũng bị thay đổi bên ngoài phương thức.
+
+            ----> Ghi nhớ → GIÁ TRỊ BIẾN SẼ BỊ THAY ĐỔI BÊN NGOÀI HÀM (KHI KẾT THÚC)
+
+            ------------
+
+            TRUYỀN THAM TRỊ là truyền giá trị của biến (không phải là địa chỉ ô nhớ), khi đó phương thức sẽ tự động tạo ra một địa chỉ ô nhớ
+             mới để lưu trữ giá trị này, do đó nó chỉ được thay đổi trong phương thức hiện hành và giá trị của biến không bị thay đổi bên ngoài 
+             phương thức hiện hành.
+
+            --------->Ghi nhớ → GIÁ TRỊ BIẾN KHÔNG BỊ THAY ĐỔI  BÊN NGOÀI HÀM  (KHI KẾT THÚC)
             
             
 

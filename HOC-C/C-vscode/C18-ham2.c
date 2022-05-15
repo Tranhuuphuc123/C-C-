@@ -113,6 +113,8 @@ void timNgayDungSau(int ngay, int thang, int nam){
     }else if((ngay==29 || ngay==28)&& thang==2){
         ngay=1;
         thang++;
+    }else{
+        ngay++;
     }
     printf("\n >> Ngay dung sau ngay da nhap: %d-%d-%d", ngay, thang, nam);
 }
