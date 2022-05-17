@@ -1,7 +1,7 @@
 #include<stdio.h>
 /* prototype*/
 void hoanVi_1(int a, int b);
-void hoanVi_3(int *a, int *b);
+void hoanVi_2(int *a, int *b);
 
 
 
