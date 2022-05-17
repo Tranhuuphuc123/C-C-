@@ -1,7 +1,6 @@
 #include<stdio.h>
 /* prototype*/
 void hoanVi_1(int a, int b);
-void hoanVi_2(int &a, int &b);
 void hoanVi_3(int *a, int *b);
 
 
@@ -23,14 +22,11 @@ int main(){
     printf("\n tham tri: a = %d va b = %d",a, b);    
 
 
-    // truyền tham chiếu
-    hoanVi_2(a, b);
-    printf("tham chieu: a = %d va b = %d",a,b);
+    // truyền tham chiếu với con trỏ
+    hoanVi_2(&a, &b);
+    printf("\n tham chieu: a = %d va b = %d",a,b);
     
-    // con trỏ
-
-    hoanVi_3(&a, &b);
-    printf(" con tro: a = %d va b = %d ", a, b);
+  
 }
 
 /*ham con*/
@@ -40,13 +36,8 @@ void hoanVi_1(int a, int b){
     b=temp;
 }
 
-void hoanVi_2(int &a, int &b){
-    int temp=a;
-    a=b;
-    b=temp;
-}
 
-void hoanVi_3(int *a, int *b){
+void hoanVi_2(int *a, int *b){
     int temp = *a;
     *a = *b;
     *b = temp;
