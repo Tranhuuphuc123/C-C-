@@ -24,6 +24,7 @@ int main(){
 
     // truyền tham chiếu với con trỏ
     hoanVi_2(&a, &b);
+    // khai báo &a &b: khai báo tên địa chỉ bố nhớ là a và b có chứa giá trị a và b.
     printf("\n tham chieu: a = %d va b = %d",a,b);
     
   
@@ -41,6 +42,8 @@ void hoanVi_2(int *a, int *b){
     int temp = *a;
     *a = *b;
     *b = temp;
+
+    // *a, *b, *c: chính là giá trị được lưu trong bộ nhớ có địa chỉ tên a, b , c
 }
 
 
