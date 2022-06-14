@@ -13,11 +13,7 @@ int main(){
     do{
        printf(" \n nhap vao gia tri n: ");
        scanf("%d", &n); 
-       printf("\n nhap vao so a: ");
-       scanf("%d",&a);
-       printf("\n nhap vao so b: ");
-       scanf("%d", &b);
-
+       
         printf("********************************************************\n");
         printf("*\t1. thuc hien kiem tra so nguyen to: \n*");
         printf("*\t2. thuc hien kiem tra tong = a +b: \n*");
