@@ -1,26 +1,36 @@
+/* tính giai thừa*/
 #include<stdio.h>
+
+/*hàm nguyên mẫu prototype*/
+int tinhGiaiThua(int x);
+
+/*hàm main chính*/
 int main(){
     int n;
-    do{
-        printf("enter the n: ");
-        scanf("%d", &n);
-    }while(n<=0);
+    printf("enter the n: ");
+    scanf("%d",&n);
 
-    int giaiThua = 1;
+    printf("----------------\n");
+    tinhGiaiThua(n);
+    
 
-    printf("\n");
-    printf(" ket qua giai thua cua %d la: \n", n);
-    printf("----------------------------\n");
+}
 
 
-    printf("%d! = ");
-    for(int i=1; i<=n; i++){
-        giaiThua *=i;
-        if(i==n){
-            printf("%d = %d", n, giaiThua);
+/*thàm con*/
+int tinhGiaiThua(int x){
+    int giaithua =1;
+    for(int i=1;i<=x;i++){
+        giaithua *=i;
+    }
+
+    printf("giai thua cua %d!: ", x);
+    for(int i=1;i<=x;i++){
+        if(i==x){
+            printf(" %d = %d",i,giaithua);
         }else{
-            printf(" %d * ", i);
+            printf(" %d *", i);
         }
     }
-    return 0;
+
 }

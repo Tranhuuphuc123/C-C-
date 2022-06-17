@@ -36,7 +36,7 @@ int main(){
     /*tìm max min*/
     printf("----------------\n");
     printf("\nmax: %d ", timMax(arr, n));
-    printf("\nmin: %d ", timMin(arr, n));
+    printf("min: %d ", timMin(arr, n));
 
 }
 
