@@ -39,4 +39,26 @@ int main(){
     }
 }
 
-// thử nháp chơi thui
+
+/*hàm con xây dựng*/
+// ham kiểm tra nguyên tố
+int soNguyenTo(int x){
+    if(x<=1){
+        printf(" %d khong la so nguyen to", x);
+    }
+    for(int i=2; i<x-1; i++){
+        if(x%i==0){
+            printf(" %d khong phai la so nguyen to \n",x);
+        }
+    }
+     printf(" %d la so nguyen to",x);
+}
+
+
+// hàm tính tổng
+int tong(int a, int b){
+    int sum  = a + b;
+
+    printf("tong la: %d + %d = %d",a,b, sum);
+
+}
