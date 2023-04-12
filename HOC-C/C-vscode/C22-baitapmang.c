@@ -56,6 +56,7 @@ int soNguyenTo(int x){
     return 1;
 }
 
+
 // xấy dựng hàm tìm  max min trong mảng
 int timMax(int a[], int n){
     int max =a[0];

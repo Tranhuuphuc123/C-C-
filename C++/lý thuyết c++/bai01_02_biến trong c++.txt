@@ -1,0 +1,97 @@
+*****TÌM HIỂU VỀ BIẾN TRONG C++****************
+>>Quy tắc khai báo biến trong C
+    *** kiểu dữ liêu + tên biến;
+     vd:
+           int so_nguyen;
+           char kyTu;
+           ..........
+           
+        + Một biến có thể có các chữ cái, chữ số và dấu gạch dưới.
+        + Tên biến chỉ có thể bắt đầu bằng bảng chữ cái và dấu gạch dưới. Nó không thể bắt đầu bằng chữ số.
+        + Không có khoảng trắng trong tên biến.
+        + Tên biến không đc trùng với từ khóa kiểu dữ liệu như int, float, vv.
+
+>> Các loại biến và phương cách sử dụng
+ -  Biến local (địa phương).
+      + Một biến được khai báo bên trong hàm hoặc khối lệnh được gọi là biến địa phương.
+     -->Nó được khai báo trong khối lệnh main().
+            vd:
+                void function1() {
+                        int x = 10; // bien local
+                    }
+
+ - Biến global (toàn cầu).
+      + Một biến được khai báo bên ngoài hàm hoặc khối lệnh được gọi là biến toàn cầu. Bất kỳ hàm nào cũng
+      có thể thay đổi giá trị của biến toàn cầu. Nó có sẵn cho tất cả các chức năng.
+
+           vd: 
+                    int a = 20; // bien global
+                    
+                    void function1() {
+                        int x = 10; // bien local
+                    }
+  - Biến static (tĩnh).
+       + Một biến được khai báo với từ khóa static được gọi là biến tĩnh.
+
+       --->Nó giữ lại giá trị của nó sau nhiều lần gọi hàm.
+
+                #include <iostream>
+                
+                using namespace std;
+                
+                void function1() {
+                    int x = 10; // bien local
+                    static int y = 10; // bien static
+                    x = x + 1;
+                    y = y + 1;
+                    cout << "x = " << x << ", y = " << y <<endl;
+                }
+                
+                int main() {
+                    function1();
+                    function1();
+                    function1();
+                    return 0;
+                }
+                Kết quả:
+
+                x = 11, y = 11
+                x = 11, y = 12
+                x = 11, y = 13
+     ====>> Hàm function1() được gọi 3 lần, biến địa phương x sẽ in cùng một giá trị cho mỗi lệnh chức năng
+      gọi là 11, 11, 11. Nhưng biến tĩnh sẽ in giá trị được tăng lên 1 trong mỗi lần gọi hàm là 11, 12, 13.
+
+- Biến automatic (tự động).
+     + Tất cả các biến trong C được khai báo trong khối lệnh, là các biến tự động theo mặc định. Bởi chúng ta 
+     có thể khai báo một cách rõ ràng biến tự động bằng cách sử dụng từ khóa auto.
+        
+        vd:
+            void main(){  
+                int x = 10; // bien local (cung la bien automatic)
+                auto int y = 20; // bien automatic
+            }  
+
+ - Biến external.
+     + Chúng ta có thể chia sẻ một biến trong nhiều tập tin mã nguồn C bằng cách sử dụng biến external. 
+     Để khai báo biến bên ngoài, bạn cần sử dụng từ khóa extern
+
+        vd:
+
+         + tạo file myfile.h
+                extern int x = 10; // bien external variable (cung la bien global), đg khai báo ở 1 file riêng
+                                                                                                 kiểu thư viện.
+         + tạo file text.cpp
+                #include <iostream>
+                #include "myfile.h" //load thư viện khai báo biến external vào
+                
+                using namespace std;
+                
+                void printValue() {
+                    cout << "x: " << x;
+                }
+                
+                int main() {
+                    printValue();
+                }
+
+                ====> Kết quả: x: 10 , giá trị đc hiểu từ khai báo x=10 ở tv myfile.h đã xây dựng trc đó.

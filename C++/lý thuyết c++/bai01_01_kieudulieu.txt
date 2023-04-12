@@ -1,0 +1,70 @@
+****KIẾN THỨC TỔNG QUÁT VỀ C++*****
+>>>> KIẾN THỨC TỔNG QUÁT:
+ - Chương trình c++ đầu tiên:
+        #include<iostream>
+        using namespace std;
+        int main(){
+            // khối lệnh thực thi
+            return 0;
+        }
+    
+   + trong đó: 
+      ++ thư viện c++: iostream.
+      ++ using namespace std; là cách khai báo toán tử phạm vi (std) trong c++. Vì nếu không khai báo std
+      (toán tử phạm vi trong c++) thì khi sử dụng các hàm khối lệnh trong c++ ta bắt buộc phải thêm std:: vào
+      câu lệnh: vd( std::cout<<, std::cin>>....) thay vì chỉ cần viết cout<<, cin>> một cách đơn giản hơn nhiều.
+
+
+----> trong quá trình code C++ mình sẽ sử dụng vs code nên cách build code trong C++ có thể thực hiện phím tắt
+hoặc chạy code với terminal:
+    + câu lệnh tắt chạy code c++ trên vscode là:
+           ctrl+Alt+N
+    + chạy code trên terminal:
+         gõ: g++ .\tên_file.cpp -o tên_file.exe ---> để tạo file exe.
+            .\tên_file.exe -->để chạy code
+
+
+
+>>>>> KIỂU DỮ LIỆU TRONG C++
+ kiểu dữ liệu                 từ khóa              phạm vi               giá trị
+
+   boolean                     bool                                     true/false
+   ký tự                      char(1byte)        -127->127             ký tự đơn lẻ
+                                                  or 0 -> 255 
+                         unsigned char(1byte)     0 tới 255          ký tự phạm vi có giá không âm
+                          signed char(1byte)     -127 tới 127        ký tự phạm vi có giá có âm
+
+   số nguyên                   int(4byte)        -2^31 tới 2^31        số giá trị nguyên                                                       
+                          unsigned int(4byte)     0 tới 2^32         ký tự phạm vi có giá không âm
+                          signed int(4byte)      -2^31 tới 2^31      ký tự phạm vi có giá có âm
+
+   Số thực                   float(4byte)        +/- 3.4e +/- 38         (~7 chữ số)
+                             Double(8byte)       +/- 1.7e +/- 308        (~15 chữ số)
+                          long double(8byte)     +/- 1.7e +/- 308        (~15 chữ số)
+
+  sâu chuối ký tự             string               [lenght do người viết gán]
+
+  kiểu ký tự có dấu       wchar_t(2byte or 4byte)                         gõ tiếng việt có dấu
+                                                                         trong c++.                 
+
+   ** trong đó:
+     + signed: kiều dữ liệu có giá trị âm
+     + unsigned: kiểu dữ liệu không chứa giá trị âm.
+     + cách kiểm tra giá trị sizeof của c++:  sizeof(kiểu_dữ _liệu)
+         vd:
+            cout << "Kich co cua char la: " << sizeof(char) << endl;
+            ............
+
+
+
+            
+
+
+
+   
+		
+		
+
+		
+	
+

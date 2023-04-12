@@ -1,0 +1,63 @@
+*****TÌM HIỂU VỀ CÂU ĐIỀU KIỆN IF ELSE VÀ SWITCH CASE TRONG C++*****
+>>> THU VIỆN math
+
+thư viện math.h, là thư viện khai báo để học các hàm toán học trong lập trình C++:
+
+*** CÁC HÀM TOÁN HỌC TRONG LẬP TRÌNH C++:
+ 01/ Hàm ceil(number): làm tròn lên một số đã cho, hàm này trả về kết quả số nguyên lớn hơn hoặc bàng số đã cho
+ 02/ floor(Number): làm tròn xuống một số đã cho, hàm này trả về kết quả số nguyên nhỏ hơn hoặc bằng số đã cho 
+ 03/ sqrt(number): căn bậc 2 trong toán học
+ 04/ pow(base(số ban đầu), exponent( số mũ)): trả về số mũ đã cho
+    vd 5^3 viết là: pow(5,3);
+ 05/ abs(number): || giá trị tuyệt đối
+
+
+ >>>> CẤU TRÚC RẼ NHÁNH IF, IF-ELSE, IF-ELSE IF-IF
+ - Giống khái niệm với C.
+
+ >>>>> Switch case:
+
+   ****ví dụ về switch case:
+
+                #include<iostream>
+                using namespace std;
+
+                int main(){
+                    //cấu trúc switch case
+
+                    int thang, nam;
+                    cout<<"nhap vao thang: \n";
+                    cin>>thang;
+                    cout<<"nhap vao nam: \n";
+                    cin>>nam;
+
+
+                    switch (thang)
+                    {
+                            case 1:
+                            case 3:
+                            case 5:
+                            case 7:
+                            case 8:
+                            case 10:
+                            case 12:
+                                cout<<"month has is 31 days";
+                                break;
+                            case 4:
+                            case 6:
+                            case 9:
+                            case 11:
+                                cout<<"month has 30 days";
+                                break;
+                            case 2:
+                            if(nam%400==0 || nam%4==0 && nam%100!=0){
+                                cout<<"months has 29 days";
+                            }else{
+                                cout<<"months has 28 days";
+                            }
+                            break;
+                            default:
+                                cout<<"404 not found !";
+                                break;
+                    }
+                }
