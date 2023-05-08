@@ -1,0 +1,28 @@
+*****************************TIỀM HIỂU VỀ HẰNG SỐ TRONG C++*******************************
+>>>>>kHÁI NIỆM:
+ - Hằng số trong c++ với từ khóa(const) trước hay sau kiểu dữ liệu của của biến
+ --> giá trị hằng số không thay đổi trong suốt chương trình.
+
+   vd:
+       const double PI = 3.14159;
+       double const PI = 3.14159
+
+    
+>>>> Hằng số với chỉ thị tiền xử lý:
+ - ngoài cách sử dụng với từ khóa const để khai báo hằng số, C++ vẫn cho phép dùng tiền xử lý #define
+
+ -Syntax:
+     #define <name> value
+
+      + trong đó:
+        ++ name: tên của hằng số luôn viết hóa, không được dùng dấu cách
+        -->nếu dài quá có thể dùng dấu '_' để thay dấu cách
+        ++ value giá trị gáng:
+
+
+          vd:
+            #define PI 3.14159
+
+
+
+    >>>>              

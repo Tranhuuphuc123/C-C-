@@ -33,7 +33,9 @@
   - Biến static (tĩnh).
        + Một biến được khai báo với từ khóa static được gọi là biến tĩnh.
 
-       --->Nó giữ lại giá trị của nó sau nhiều lần gọi hàm.
+       --->Với biến static thì nó sẽ dễ dàng tham chiếu tới biến và các funtion
+       ---> trong lập trình OOP với class có static thì có thể gọi class đó sử dụng một cách dễ dàng mà không cần
+       khai báo gọi lại class đó....
 
                 #include <iostream>
                 

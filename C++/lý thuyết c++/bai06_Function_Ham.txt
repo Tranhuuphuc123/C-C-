@@ -1,0 +1,101 @@
+****************HÀM FUNCTION TRONG C++***************************
+>>>>> kHÁI NIỆM:
+ - Hàm (Function) là một dãy các câu lệnh có thể tái sử dụng. Được thiết kế thực hiện một công việc cụ thể trong chương trình.
+ ===> Function trong C++ tương ứng method trong môt class...
+ -Syntax:
+   
+    <Kiểu trả về type> <tên hàm>(<tham số>){
+      // các câu lệnh thưc thi
+      return <value>;
+    }
+
+
+    + trong đó:
+       ++ <Type>: kiểu dữ liệu-> xem lại bài khai báo kiểu dữ liệu và biến
+       ++ <tên hàm>: tên do người dùng đặt
+       ++ <tham số>: truyền các biến vào
+       ++ return <value>: trả về giá trị khai báo cho hàm.. (có thể không có)
+       --> hiểu rộng hơn là hàm khai báo có kiểu dưc liệu type gì thì return trả về kiểu đó.. để thông báo cho chương trình hay hàm chức năng đó là đã trả về đc thành công hay không.
+
+
+    ++ ví dụ:
+
+        #include <iostream>
+        using namespace std;
+
+        // xây dựng function sayHello()
+        void sayHello() // sayHello() is the called function in this example
+        {
+            cout << "Hello Howkteam.com!" << endl;
+        }
+
+        // gọi hàm sayHello() trong hàm chính Main()
+        int main()
+        {
+            cout << "Starting main()" << endl;
+
+           // gọi hàm sayHello() ra thực thi
+            sayHello();
+
+            cout << "Ending main()" << endl;
+
+            return 0;
+        }
+       
+>>>>>>>>>>>>CÁC THAM SỐ(PARAMETERS) VÀ ĐỐI SỐ(ARGUMENTS)
+ - KHÁI NIỆM:
+  ## Thám số(parameters) là giá trị của biến đc cung cấp bởi lời gọi hàm, thường được tgoij và đặt trong dáu() khi khai bá hàm.
+  ## Đối số (arguments): là các giá trị truyền vào hàm qua lời gọi hàm, cách nhau bởi dấu ",".
+
+
+   vd:
+
+   // với int x, int y là một parameters truyền vào.    
+   void printValue(int x){
+        cout<<x<<endl;
+   }
+
+    void add(int x, int y){
+        return x + y
+    }
+
+    int main(){
+      // gọi hàm thực thi trong hàm chính main
+      printValue(27);
+      cout<<printValue<<endl;
+
+      cout<<"tinh tong: "<<add(7,8)<<endl;
+      //==> lúc này giá trị truyển vào là 27, 7,8 chính là các arguments đối số truyền vào
+    }
+ 
+
+
+
+
+
+
+>>>>>>>>>>>>>CÁC KIỂU GIÁ TRỊ TRẢ VỀ KHI XÂY DỰNG HÀM TRONG C++:
+ >> Hàm function không có tham số và kiểu dữ liệu trả về(void):
+   - với function có khai báo là void sẽ không có giá trị trả về
+   vd:
+     void SayHello(){
+       // nội dung
+     }
+  
+ >> Hàm function có kiểu dữ liệu trả về nhưng không có đối số truyền vào
+   vd:
+   int Print(){
+      // nội dung
+   }
+
+>> Hàm không có kiểu dl trả về nhưng có đối số:
+  vd:
+  void printValue(int x){
+     return x;
+  }
+
+>> Hàm có kiểu dữ liệu trả vè và có đối số:
+  vd:
+  int printValue(int x, int y){
+    return x + y;
+  }

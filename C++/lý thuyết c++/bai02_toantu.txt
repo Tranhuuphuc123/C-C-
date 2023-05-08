@@ -52,15 +52,15 @@
          &           AND (num1 & num2)        1101&1110              1100 đối với toán tử & thì 1 với 1 là 1 
                                                                   còn lại 0vs1 hoặc 1vs0 đều là 0
 					                                                                                                                                                                                                                                                             
-		 ^	         XOR (num1 ^ num2)        1101&1110              0011 đối với ^ (XOR) thì 1vs1 la 0 còn
-                                                                  0vs1 hoặc 1vs0 đều bằng 1.
+        ^	           XOR (num1 ^ num2)        1101&1110              0011 đối với ^ (XOR) thì 1vs1 la 0 còn
+                                                                   0vs1 hoặc 1vs0 đều bằng 1.
 
-		 |           OR (num1 | num2)         1101|1110              1111 đối với | (OR của toán hạng bit)
-                                                                  chỉ cần 1 vế của num1 or num2 có 1 thì thành 1.
-		
-		 ~           NOT (~ num1)	          ~1101	                 0010 đối với ~ (NOT của toán hạng bit) thì 
-                                                                  nó sẽ phủ định và đổi ngược kết quả 0 thành 
-                                                                  1 và 1 thành 0.
+        |            OR (num1 | num2)         1101|1110              1111 đối với | (OR của toán hạng bit)
+                                                                 chỉ cần 1 vế của num1 or num2 có 1 thì thành 1.
+
+        ~               NOT (~ num1)	        ~1101	              0010 đối với ~ (NOT của toán hạng bit) thì 
+                                                                nó sẽ phủ định và đổi ngược kết quả 0 thành 
+                                                                1 và 1 thành 0.
 
 
 
@@ -124,13 +124,13 @@
           Unary (toán 1 ngôi)	            +a(dương a)  -a(âm a) !(not của logical)		    từ  dưới lên và từ phải sang trái
 			                                ~(not cua bit)  ++ -- (type)* sizeof
      
-           Tính nhân	  	                       * / %					                    từ trái sang phải
+           Tính nhân	  	                       * / %					                            từ trái sang phải
 
-           Tính cộng trừ		                     + -					                    từ trái ang phải
+           Tính cộng trừ		                     + -					                              từ trái ang phải
 
-           Dịch chuyển		                       << >>					                    từ trái sang phải
+           Dịch chuyển		                       << >>					                            từ trái sang phải
   
-           Quan hệ	                               < <= > >=				                    từ trái sang phải
+           Quan hệ	                            < <= > >=				                            từ trái sang phải
 
            Cân bằng		                           ==  !=(#)		                            từ trái sang phải
 

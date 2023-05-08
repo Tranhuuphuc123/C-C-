@@ -1,0 +1,92 @@
+******************************TIỀM HIỂU VỀ VONG LẶP LOOP TRONG C++****************************
+>>>> FOR LOOP:
+ - Khái niệm: là một cấu trúc lặp được sử dụng để thực thi số lần lặp cụ thể.
+ - syntax:
+ for(<khởi tạo biến>; <check điều kiện> ; <tăng giảm>){
+     // nội dung thực thi
+ }
+
+      ++ ví dụ: code
+
+              #include<iostream>
+                using namespace std;
+                int main(){
+                  int i;
+                  for(i=0;i<10;i++){
+                      cout<<i<<"\t";
+                  }
+                  return 0;
+                } 
+
+  
+
+ >>>>Do-while Loop:
+  - Khái niệm: Không giống như vòng lặp for và while, trong đó kiểm tra điều kiện lặp ở đầu vòng lặp, vòng lặp
+  do-while trong C++ kiểm tra điều kiện lặp của nó ở dưới cùng của vòng lặp. Vòng lặp do-while tương tự như một 
+  vòng lặp while, ngoại trừ nó được đảm bảo để thực hiện ít nhất một lần. 
+
+  -Syntax:
+
+      do {
+            // Khối lệnh được thực thi
+        } while(condition); 
+
+
+        ++ ví dụ:
+
+        // vòng lặp do-while
+            int j=0;
+            do{
+               cout<<j<<"\t";
+               j++;
+            }while(j<10);
+
+              
+
+>>>> WHile loop:
+  - Khái niệm: Vòng lặp while trong C++ được sử dụng để lặp một phần của chương trình một vài lần. Nếu số lần 
+  lặp không được xác định trước thì vòng lặp lặp while được khuyến khích sử dụng trong trường hợp này. 
+
+  -Syntax:
+        while(condition) {
+            // Khối lệnh được lặp lại cho đến khi condition = False
+        }
+
+
+
+        ++ ví dụ:
+
+            int k =0;
+            while(k<10){
+              cout<<k<<"\t";
+              k++;
+            }
+
+         
+
+
+>>> FOREACH trong C++:
+ - Khái niệm:Trong C++, vòng lặp foreach được gọi là vòng lặp for each. Nó được sử dụng để lặp qua từng phần tử 
+ của một tập hợp (array, vector, list, set, map, ...) và thực hiện một hành động nào đó trên từng phần tử đó. 
+
+ -Syntax:
+
+    for (type variable : collection) {
+      // code
+    }
+
+     ++ trong đó: 
+        > type: kiểu dữ liệu
+        > variable: tên biến đại diện
+        > collection: đại diện mảng (ở C++ là Vector, tg tự ArrayList).
+
+     ++ ví dụ:
+
+      // khai báo mảng Vector tương tự ArayList trong C++
+        vector<int> numbers = {1, 2, 3, 4, 5};
+
+        for (int num : numbers) {
+          cout << num << " ";
+        }
+
+          

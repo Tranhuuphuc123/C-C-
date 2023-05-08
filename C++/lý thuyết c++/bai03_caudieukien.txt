@@ -13,7 +13,32 @@ thư viện math.h, là thư viện khai báo để học các hàm toán học 
 
 
  >>>> CẤU TRÚC RẼ NHÁNH IF, IF-ELSE, IF-ELSE IF-IF
- - Giống khái niệm với C.
+ >> Cấu trúc 1:
+                if (điều_kiện) {
+                // đoạn code được thực hiện nếu điều kiện đúng
+                }
+
+             ---------------------------------------------
+
+   >>Cấu trúc 2:
+
+                if (điều_kiện) {
+                // đoạn code được thực hiện nếu điều kiện đúng
+                } else {
+                // đoạn code được thực hiện nếu điều kiện sai
+                } 
+
+             ---------------------------------------------
+
+    >>Cấu trúc 3:
+
+                if (điều_kiện_1) {
+                // đoạn code được thực hiện nếu điều kiện 1 đúng
+                } else if (điều_kiện_2) {
+                // đoạn code được thực hiện nếu điều kiện 1 sai và điều kiện 2 đúng
+                } else {
+                // đoạn code được thực hiện nếu điều kiện 1 sai và điều kiện 2 sai
+                } 
 
  >>>>> Switch case:
 

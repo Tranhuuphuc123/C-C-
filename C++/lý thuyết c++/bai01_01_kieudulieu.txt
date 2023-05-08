@@ -53,6 +53,7 @@ hoặc chạy code với terminal:
      + cách kiểm tra giá trị sizeof của c++:  sizeof(kiểu_dữ _liệu)
          vd:
             cout << "Kich co cua char la: " << sizeof(char) << endl;
+            
             ............
 
 

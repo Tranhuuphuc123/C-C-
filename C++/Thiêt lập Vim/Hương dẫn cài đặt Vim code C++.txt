@@ -1,0 +1,237 @@
+*****************CÁC BƯỚC CÀI ĐẶT VIM C/C++***************************
+>>>> Các bước: tham khảo : https://www.youtube.com/watch?v=Tp8i1EHsQ1Q&t=1597s
+ - b1/ tải neovim: phiển bản neovim Qt cho windowwn:
+    
+ - b2: tiến hành download Vim_config (init.vim)-> lấy link github: https://github.com/VuNguyenCoder/VimConfig
+ - b3: tiến hành tải và liên kết python, nodejs,..với nevim thông qua lệnh code cmd 
+    + install Nodejs:
+       gõ npm install neovim -g
+    
+    + install Python:
+      gõ pip install pynvim
+
+    ===> nôi dung đang đc xây dựng: nên thảm khảo video của vũ nguyên coder/ set up neovim c/c++
+
+  -b3: check kiểm tra kết nooiis ok trên Neovim chưa
+    gõ->   Shift : checkhealth
+
+  - b4: cấu hình Install plugin: (-> mục này dùng github có sẵn tải về tùy chỉnh thêm)
+  .....
+     cal plugin#begin('dg dẫn')
+       ..// nội dung plugin packgae themes cần cài thêm cho giao diện siêu đjep đa chức năng..
+     cal plugin#end()
+......
+    ==> set cài đặt cho neo vim: gõ
+      shift: PlugInstall
+
+      ** Muốn xóa themes nào thì ẩn ghi chú nó đi và chạy lại(Reload lại Install setup):
+         shift: PlugClean
+
+      ** <uốn tiếp tục cài lại Themes, package đã ẩn thì chọn
+       Shift: source % -> để reload trc
+       Shift: PlugInstall -> để cài lại lần nữa
+
+
+
+  =================================================================================================                            ===========
+  ***********************THIẾT LẬP PHÍM TẮT*****************
+
+
+    
+
+
+
+  =============================================================================================================
+  **********************CÁCH SỬ DỤNG NEOVIM***********
+  ** CHẾ ĐỘ NODE(chế độ hoạt động):
+    - soạn thảo văn bản: I
+    - thoát lệnh: Esc, lưu ý mỗi lần bấm Esc là thoát lệnh ngay và phải chọn lại chế độ
+    - chế độ bôi đen: V
+      + bôi đen hết câu: nhấn viw
+      + bôi đen nhanh hết đoạn: nhấn Shift v
+    - thực hiện câu lệnh: shift :
+    
+
+    
+  1/ TIỀM KIẾM TỪ(SEARCH TỪ):
+   - NHẬP / 'nội dung từ cần tiềm kiếm'
+   - bôi đen từ muốn tìm kiếm bằng visual; 
+     -->  nhấn   Shift 8 (tức *): nó sẽ tiềm từ đó.
+
+  1.1/ TIỀM KIẾM -> THAY TỪ KHÓA CŨ THÀNH TỪ KHÓA MỚI
+   - VD: Có từ "Thông tin"-> search thông tin-> muốn thay đổi thông tin thành 
+   "Information"
+     nhấn: Shift : %s/thông tin/Infomation
+
+  2/ TIỀM KIẾM NÂNG CAO 
+    - 
+  3/ NÚT CTRL+Z VÀ CTRL+Y: NÚT BACK - NÚT TỚI TRONG NEOVIM
+   - NÚT TỚI: CTRL + O hoặc mún quay lại có thể nhấn u
+   - NUT BACK: CTRL + I
+
+  4/ Mở terminal chạy code:
+    - cmd truyền thống:
+      Shift: Terminal hoặc term  
+    - Nhập:
+      + Shift : FloatermNew
+    - muốn truy cập đúng file/ project mong muốn
+      + nhập: shift : FloatermNew G:\PRATICE_CODE
+
+  5/ Chạy code C++:
+    - gõ: g++ .\<tên file.cpp> -o <tên file.exe>
+      chạy code: .\<tên file.exe>
+    - chạy java: javac ten_file.java
+      chạy code: java tên_file
+
+  6/ QUẢN LÝ FILE, TAB, MONITOR MÀN HÌNH
+    - MỞ FILE:
+        shift : e <tên file.cpp>
+        ==> note: khi mở file lên thì ta code và lưu thay đổi sau khi code xong
+     - TRỞ VỀ THƯ MỤC CHA
+       Shift : cd
+     - tắt file: thay vì mỗi lần Shift :q  thì ta close file thui băng
+       nhấn Shift : bd  -> tức là close file
+     - Ẩn file bằng cách nhấn:
+        Shift : hide
+    - Ẩn tất cả trừ màn hinh tab chính:
+      Shift : nly
+
+     - TẠO TAB MỚI-> MỞ NEW WINDOWN
+       Shift : tabnew
+
+     - Tạo file mới như thế nào:
+      nhấn Shift: Ter or Shift: FloatermNew -> mở terminal > truy cập đến dolder chứa> tạo file: type nul>'tên file'.cpp 
+
+  6.1/MỘT SỐ LỆNH TẮT CMD TERMINAL:
+     
+    ****************LỆNH TẮT CMD***************
+    - MỞ FILE: TRUY CẬP Ổ ĐĨA, vd: cmd> gõ  G: > cd  đg dẫn>enter
+    - Đang ở muc 1/2 mún quay lại mục 1 thay vì nhập lại từ đầu:ta nhấn cd ..
+    - tạo file.txt,.doc,.cpp...: type nul> tên file.txt/.doc/.cpp
+    --> muốn tạo nhiều file lượt thì: type nul> file1 file2...
+       + đối với git: touch tên file.txt/.doc/.cpp.java...
+       ---> tg tự mún tạo nhiều file lượt thì: touch file1 file2..
+
+    - tạo file văn bản .doc(word): copy con tenfile.txt  
+
+    - xóa file:  del   tên_file(.txt, .doc..)
+      --> xóa nhiểu file: cmd>del file1 fie2 file3 ..
+       + nếu dùng git: rm tên file.txt/.doc.cpp...
+       ---> tương tự muốn xóa nhiều file lượt thì rm file1 file2....
+      
+    - tạo thư mục folder: mkdir tên_folder
+    - xóa thư mục: cmd> rmdir  tên_folder>Y/N chọn Y.
+    - xem danh sách list:  dir /a
+       + nếu dùng git: ls
+       
+    - mở nhanh vscode: cmd> .code
+    - mở nhanh intelj: 
+
+
+
+  7/ LỆNH SAVE, KHÔNG SAVE KHI THOÁT, VỪA SAVE VỪA THOÁT..
+
+   - lệnh thoát chương trình Neovim
+      Shift : q
+   - Lệnh thoat và có save file:
+     Shift : wq
+   - Lệnh lưu file thui
+      Shift : w
+   - Lệnh thoát mà không lưu luôn
+      Shift : q!
+
+   8/ Mở Project/file Growser
+    - nhấn:
+       Shift : NERDTree  or NERDTreeToggle
+
+     - chọn mở đúng file/project
+
+       Shift : NERDTree G:\PRATICE_CODE
+     
+     - Reload lại chương trình project/fileWord: Giả dụ vừa mở Project lên tuy nhiên có cập nhật file mới để load lại Project thì
+     nhần:
+           NERDTreeRefresh.
+      
+     - Muốn ẩn Project/file: NERDTreeClose 
+
+
+
+
+    9/ CHIA ĐÔI MÀN HÌNH LÀM VIỆC    
+      - Chia theo chiều ngang:
+        Shift : Sex
+            or
+        Shift : split <filename cần mở>  
+       
+      - Chia theo chiều dọc: 
+
+        Shift : Sex!
+            or
+        Shift : vs <filename cần mở>   
+
+
+    **9.2/ ĐIỀU HƯỚNG CHO CON TRỎ KHI CHIA ĐÔI MÀN HÌNH
+      - MUỐN chuyển con trỏ qua lại giữa các màn hình/tab đang chia ra thì nhấn:
+         bật Normal>gõ ctrl + w + <mũi tên(hay h j k l) để điều hướng qua lại>
+
+        - nhấn Ctr+w= :	Điều chỉnh kích thước bằng nhau cho tất cả các màn hình khi phân tách.
+
+        -Nhấn Ctrl+W- : dịch chuyển phần đc chọn có kích thước tăng lên 1 tí..
+
+        - ví dụ chia đôi màn hình theo chiều dọc: tab1 bên trái và tab2 bên phải -> muốn dổi vị trị nhấn:
+          ctrl + w> sau đó nhấn tiếp shitl + l (tức L)
+
+
+
+
+
+    10/ DI CHUYỂN KHÔNG DÙNG CHUỘT(thánh điều hướng):
+      - lên: nhấn k hoăc mũi tên lên
+
+        + muốn di chuyển lên đầu trang nhanh hơn: gõ gg
+
+      - xuống: nhấn j hoặc mũi tên xuống
+
+       + muốn xuống cuối trang: gõ Shift g ~ (G)
+
+      - qua trái: nhấn L hoăc mũi tên trái
+
+      - qua phải: nhấn H hoặc mũi tên qua phải
+
+       + muốn di chuyển ra giữa file hoặc nhắm vị trí đó là nhiêu
+         gõ Shift : <số đếm vị trí>
+         vd: Shift : 8 -> nó sẽ di chuyển ra từ trái qua phải đến vtri ký tự 8
+
+
+
+    11/ DỊCH CHUYỂN CON TRỎ:
+     - dịch chuyển con trỏ qua 1 ký tự:
+
+       nhấn a
+
+     - dịch chuyển con trỏ tới cúi dòng:
+
+      Nhấn Shift a ~ (tức A)
+
+     - đang ở dòng 1 muốn xuống dòng 2 mà không enter:
+
+       nhấn o
+
+     - đang dòng 1 muốn lên trên dong 1 đẩy dòng 1 xuống làm dòng 2:
+
+       nhấn Shift o ~ (tức O)
+
+
+      12/ CUT.COPY,PASTE:
+       - cut dòng:
+         nhấn dd -> lưu ý khi cắt thì bôi đen bằng visual trước
+
+       - copy dòng: 
+          + nhấn  y (lưu ý bôi đen visual nộiu dung cần copy)
+          + nhấn yy là copy dòng hiện tại ngay con trỏ đang hiện diện
+          + nhấn y$ copy đến cúi dòng
+          + shift d(D) copy đến cúi file
+        - paste dong:
+         nhấn p 
+
+           

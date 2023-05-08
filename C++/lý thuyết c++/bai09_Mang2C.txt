@@ -1,0 +1,122 @@
+************************************MẢNG 2 CHIỀU TRONG C++******************************
+>>>>KHÁI NIỆM:
+ - Một mảng của một mảng đực gọi là mảng đa chiều, Mảng 2 chiều cũng là mảng đa chiều gồm 2 phần tử [số dòng][số cột]
+ - Thường ứng dụng xây dựng các ma trận 
+ -Syntax:
+ <type>[số dòng][số cột] = {
+     {value 1.1, value 1.2,value 1.3}, //row 1
+     {value 2.1, value 2.2, value 2.3} // row 2
+ };
+
+
+   vd:
+   ỉn arr[2][2] ={
+      { 1, 2},
+      {2, 3}
+   };
+
+   ===>in ra mảng arr =| 1 2 |
+                       | 2 3 |
+
+
+>>>> KHỞI TẠO GIÁ TRỊ MẢNG 2 CHIỀU:
+ - ngoài cách khai báo trên cũng có thể viết
+
+      int arr[số dòng][số cột] = {};
+
+
+
+      ++ ví dụ code:
+
+
+>>>>> TRUYỀN THAM SỐ MẢNG CHO FUNCTION:
+  - Syntax:
+      xd funtion trc rồi truyền tham số mảng arr vào kèm các đối số như mảng 1 chiều:
+       + lưu ý khi truyền mảng 2 chiều vào function:
+         ++ Có thể bỏ phần tử khai báo dòng và chỉ cần khai báo phần tử số cột thui
+         ++ Hoặc có thể truyền con trỏ và phần tử số cột
+      
+       <tyep><function_name>(int [*arr][n],int &m, int &n ){}; 
+          or
+       <tyep><function_name>(int arr[][n],int &m, int &n ){};
+
+       ===> lưu ý truyền đối số vào mảng có thể int m, int n hoặc int &m, int &n.
+
+
+   ======================================================================================================
+   >> ví dụ code: nhập xuất mảng thông thường bằng cách truyền đối số mảng vào function.
+
+
+      /*Bài tập về nhập xuất và in mảng 2 chiều trong C++*/
+      #include<iostream>
+      using namespace std;
+
+      // tạo biến hắng số sl tối đa row and col của mảng có thể đạt đc
+      #define ROW 100
+      #define COL 100
+
+      /* xây dựng mảng nhập 2 chiều: int &r, int &c là cách truyền số
+       phần tử cột và dòng được hiên thị chỉ định từ người dùng cho mảng.. còn COL, ROW 100 là giới hạn có thể đạt đc thui
+      */
+      void Nhapmang(int arr[][COL],int &r, int &c){
+         cout<<"nhap gioi han so phan tu row: "<<endl;
+         cin>>r;
+         cout<<"nhap gioi han so phan tu col: "<<endl;
+         cin>>c;
+
+         for(int i = 0;i<r;i++){
+           for(int j = 0; j<c;j++){
+               cout<<"arr["<<i<<"]"<<"["<<j<<"]: "<<endl;
+               cin>>arr[i][j];
+           }
+         }
+      }
+
+
+      // function xuất mảng
+      void Xuatmang(int arr[][COL], int r, int c){
+        for(int i = 0;i<r;i++){
+             for(int j = 0; j<c;j++){
+                cout<<arr[i][j]<<"\t";       
+             }
+             cout<<endl;
+        }
+      }
+
+
+      // function main thực thi
+      int main(){
+       
+        //cách thông thường
+      /* int arr[3][3];
+
+        // nhập từng phần tử mảng 2 chiều
+        for(int i =0;i<3;i++){
+          for(int j =0; j<3;j++){
+             cout<<"arr["<<i<<"]"<<"["<<j<<"]: "<<endl;
+             cin>>arr[i][j];
+          }
+        }
+
+
+        // xuất mảng 2 chiều
+        for(int i =0;i<3;i++){
+          for(int j=0; j<3;j++){
+            cout<<arr[i][j]<<"\t";
+          }
+          cout<<endl;
+        }*/
+
+
+
+        // sủ dụng cách dùng truyền mảng vào function
+        int arr[ROW][COL];
+        int row,col;
+
+        // gọi thực thi hàm Nhapmang và gán đối số của hàm main vao hàm Nhapmang
+        Nhapmang(arr,row,col);
+        cout<<"-------------------------"<<endl;
+        Xuatmang(arr, row, col);
+
+        return 1;
+      } 

@@ -1,0 +1,49 @@
+******************MẢNG KÝ TỰ TRONG C++*********************
+>>>>> KHÁI NIỆM:
+ - Trong C++ có 2 loại chuỗi ký tự:
+  + chuỗi String của lớp thư viện chuẩn STL
+  + chuỗi ký tự C-style(char) nguyên bản từ C.
+  ==> chuỗi C-style bản chất là mảng 1 chiều ký tự kết thúc bằng "\0"(tức kỹ tự null rỗng).
+
+   vd:  char arr[] = "hello"
+
+   -> mảng này có 6 phần tử: h e l l o và null(\0).
+
+ 
+ ===========
+ >>>> Khai báo và khởi tạo mảng ký tự:
+  - Syntax:
+     char mang[10] ='H','U','U'..
+     char mang[10] = "HUU"..
+
+
+ >>>> Xuất mảng ký tự:
+   vd:
+      char mang[10] = "Huu Phuc"
+      cout<< mang <<endl;
+      ==> kw: chỉ in ra đc Huu thui
+      ===> lý do: do mảng ký tự bị tràn, nó chỉ đọc đế khi gặp khoản trắng " " hoặc ký tự "\n" thui. Vì vậy nếu là một chuỗi các ký tự thì nó sẽ chỉ đọc đc dãy ký tự liền mạch đầu tiên thui.
+
+      ===> Như vậy là char vẫn chỉ là một mảng ký tự đọc đc giá trị ngắn, để giải quyết vấn đề nhập liệu mảng char ta dùng phương thức nhập cin.getline()
+
+ >>> giải quyêt tràn dữ liệu với mảng char với phương thưc cin.getline():
+   -  ví dụ mẫu:
+        #include <iostream>
+        using namespace std;
+
+        int main()
+        {
+        char szAddress[20];
+
+        cout << "Nhap dia chi: ";
+        cin.getline(szAddress, 19); -- sở dĩ 19 vì mảng char kết thúc băng null '\0'.
+
+        cout << "Dia chi cua ban la: " << szAddress << endl;
+
+        return 0;
+        }
+
+        ==> đó là cách nhập liệu mảng char với cin.getline() giúp có thể in toàn giá trị mảng tg tự như một lớp string mà không bị tràn ký từ dẫn đến mất ký tự.
+         
+
+   

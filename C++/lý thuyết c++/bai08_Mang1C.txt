@@ -1,0 +1,152 @@
+********************************MẢNG MỘT CHIỀU***************************
+>>>> khái niệm:
+ - Mảng là một tập hợp một kiểu dữ liệu có cấu trúc do người dùng định nghĩa, Biểu diễn các biến có cùng dữ kiểu dữ liệu.
+ - Mảng có kích thước được xác định ngay khi khai báo và không thay đỗi.
+
+
+>>>> Syntax:
+     <type> <Array_Name>[n] = {// value};
+
+     - trong đó:
+       ++ type: kiểu dữ liệu 
+       ++ Array_Name: tên mảng do người dùng đặt
+       ++[n]: dấu [] biểu trưng của khai báo mảng, n là số giới hạn kích thước mảng
+       ++ {value}: liệt kê phần tử mảng trong dấu {..}. có thể không liệt kê trc vẫn đc.
+
+       ==> lưu ý mảng giá trị bắt đầu phần từ 1 là chỉ số 0.
+
+
+        ++ ví dụ:
+           int arr[4] = {1,2,3,4};
+           or
+           int arr[4] ={};
+           or
+           int arr[4] {1,2,3,4};
+
+ >>>> Nhập xuất mảng:
+  >> Nhập Mảng(gán giá trị cho mảng):
+   - cách gán thủ công:
+     vd:  int arr[4];
+          arr[0] = 10;
+          arr[1] = 20;
+          arr[2] = 30;
+          arr[3] = 40;
+    
+     - dùng vòng lặpL để nhập mảng
+       
+         int arr[4];
+         for(int i=0;i<4;i++){
+            cout<<"arr["<<i<<"]: ";
+            cin>>arr[i];
+         }
+
+
+   >> xuất mảng:
+     - Kiểu thủ công:
+        cour<<arr[1];==> kw: 20
+
+      - Xuất kiểu vòng lặp:
+
+      for(int i =0;i<4;i++){
+        cout<<arr[i]<<" ";
+      }
+ 
+======================================================================= 
+ >>>> TRUYỀN MẢNG ARRAY VÀO HÀM(FUNCTION):
+ - một cách # tryền mảng vào hàm đó là khai báo giá trị mảng như một tham số và gán đối số của mảng trong một function sẽ diễn ra như vd sau:
+  + tham số kiểu mảng giống khai báo biến mảng:
+    ++ vd xây dựng funtion và truyền mảng vào:
+       void nhapmang(int a[100]){
+          // nội dung...
+       }
+
+
+  + có thể bỏ số lượng phần tử:
+    ++ vd:
+       
+    void nhapmang(int arr[]){
+       // nội dung
+    }
+
+  + Số lượng phần tử tham chiếu vào hàm với &
+    ++ vd:
+        void nhapmang(int arr[], int &n){}
+           or
+        void nhapmang(int arr[], int n){}
+
+ ================================================================================
+ >>>> SAO CHÉP MẢNG 1 CHIỀU:
+  - Để tao ra một bản so từ một mảng, bạn cần khai báo thêm 1 mảng khác có cùng kích thước với mảng ban đầu:
+
+  - syntax:
+       void saochepmang(int <mang_moi>[], int <mang_cu>[], int n );
+
+
+     ++ vi dụ code: trong vd này ta sẽ triển khai theo cách thức truyền mảng vào funtion.
+
+ >>> ví dụ code         
+                  
+            /*Nhập xuất mảng 1 chiều trong C+++
+            bai toan: nhap xuat mang tu mang dc copy
+            */
+
+            #include<iostream>
+            #include <ctime> // for time()
+            #include <string>
+            using namespace std;
+            #define MAX 1000
+            // function nhapmang
+            void Nhapmang(int arr[], int &n){
+              // với *&n được sử dụng để truyền tham chiếu cho biến n vào hàm 
+              for(int i =0;i<n;i++){
+                 cout<<"a["<<i<<"]: "<<endl;
+                 cin>>arr[i];
+              }   
+            }
+
+
+            // function xuất mảng
+            void Xuatmang(int arr[], int n){
+              for(int i = 0; i<n;i++){
+                 cout<<arr[i]<<" ";
+              }
+            }
+
+
+            // xây dựng function copy mảng:
+            void Saochepmang(int newArr[], int oldArr[], int n){
+              for(int i = 0; i<n;i++){
+                 newArr[i] = oldArr[i];
+              }
+            }   
+
+
+          // hàm main thực thi code
+          int main(){
+              int arr[MAX];// khai báo mảng
+              int n;  // chỉ ra số phẩn tử cần hiên thị thui
+
+              cout<<"nhap vao so luong phan tu mang: "<<endl;
+              cin>>n;
+
+              cout<<"----------------------"<<endl;
+              Nhapmang(arr, n);
+
+              // xuất mảng ban đầu mảng gốc
+              cout<<"-----xuat mang goc ban dau------"<<endl;
+              Xuatmang(arr, n);
+
+
+              // tiến hành copy mang và xuat la: làm theo các bc sao
+              cout<<"---------Mang copy-------------"<<endl;
+              int arr2[MAX];
+              // tiến hành sao chép mảng
+              Saochepmang(arr2, arr,n);
+              Xuatmang(arr2,n);
+
+              return 0;
+          }
+=============================================================
+===> còn nhiều giải thuật liên quan đến Mảng 1 chiều ta sẽ tiềm hiểu thêm ở phần bài tập giải thuật.
+
+        

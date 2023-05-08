@@ -1,15 +1,13 @@
-#include<iostream>
+﻿#include<iostream>
  using namespace std;
 
  int main(){
-   //cấu trúc switch case
-
+   
    int thang, nam;
    cout<<"nhap vao thang: \n";
    cin>>thang;
    cout<<"nhap vao nam: \n";
    cin>>nam;
-
 
    switch (thang)
    {
@@ -36,7 +34,7 @@
            }
            break;
         default:
-            cout<<"404 not found !";
+            cout<<"404 not found !";                        
             break;
    }
  }
