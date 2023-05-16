@@ -1,0 +1,82 @@
+*******************************KIỂU STRING TRONG C++**********************************
+>>>> KHÁI NIỆM:
+ - String là chuỗi ký tự trong C++, là một tập hợp các ký tự đơn lẻ lại thành một chũi các ký tự, # với char chỉ truy cập từng ký tự.
+ - Lib hỗ trợ String: #inlucde<string>
+
+>>>> CÁCH NHẬP DỨ LIỆU VỚI STRING:
+ - trong C++ nó không hợ trợ string đa năng như java, C# vì vậy nếu nhập inputbình thường như:
+    string str;
+    cout<<"nhap chuoi: "<<endl;
+    cin>>str;
+   ===> thì nếu nhập kiểu: "abc cbd khj" thì nó chỉ ion đc abc đầu tiên.
+   vì nó hiểu là kiểu ký tự chả thui
+
+ - để khắc phục string hay mảng ký tự char[] trong c++ ta dùng getline(cin,<tên_string>):
+      vd:
+        string str;
+        cout<<"nhap chuoi: "<<endl;
+        getline(cin,str);
+        ===> khi nhập chuỗi có khảng cách:"huu phuc la lập trinh vien"
+        ===> thì nó sẽ in ra đc nguyên câu vậy.
+
+
+==============================================================================
+ >>>> TRƯỜNG HỢP PHÁT SINH CỦA STRING TRONG C++:
+  ### BỊ NGẮT KHI NHẬP GIÁ TRỊ CIN TRC KHI NHẬP CHUỖI
+   - string trong c++ thì không đc hỗ trơ đa năng như java, c#.. có một trường hợp đặc biệt là nếu nhập chỉ
+   số cin>> trc thì kiểu string không nhập đc.
+    
+    vd:
+               int main(){
+                    string str;
+                    int n;
+                    
+                    cout<"nhap n: "<<endl;
+                    cin>>n;
+                    //--> lúc này sao khi nhập cin>>n; xong thì nó sẽ không cho nhập chuỗi string
+                  
+                    cout<<"nhap vao chuoi: "<<endl;
+                    getline(cin,str);
+
+                    cout<<"chuoi la: "<<endl;
+                    return 0;
+               }
+        
+      --> để khắc phục tình trạng này của c++ ta dùng ignore():
+      --> sữa lại đoạn trên:
+         
+                    int main(){
+                    string str;
+                    int n;
+                    
+                    cout<"nhap n: "<<endl;
+                    cin>>n;
+                    cin.ignore(); 
+                    //với ignore() nó sẽ khắc phục lỗi trên để có thể nhập chuỗi bình thường.
+
+                    cout<<"nhap vao chuoi: "<<endl;
+                    getline(cin,str);
+
+                    cout<<"chuoi la: "<<endl;
+                    return 0;
+               }
+ 
+
+
+
+=============================================================================
+ >>>>LẤY VÀ IN PHẦN TỬ CHỈ ĐỊNH TRONG CHUỖI STRING:
+  - với string trong c++ thì có thể xem nó như mảng
+  -> đồng nghĩa là ta có thể truy xuất từng phàn tử trong chuỗi
+
+   vd:
+       có chuỗi str = "Huu phuc" -> muốn in ra chữ "h"
+       cout<<str[6] = "h";
+
+          ++ code:
+          int main(){
+             String str = "Huu phuc ok!";
+             cout<<str[9];
+             return 0;
+             //-->kw: "o";
+          } 

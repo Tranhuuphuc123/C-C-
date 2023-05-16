@@ -1,0 +1,75 @@
+***************************HÀM NGUYÊN MẪU TRONG C++*****************************
+>>>>KHÁI NIỆM:
+ - Hàm nguyên mẫu trong c++ FUNCTION PROTOTYPE là một hàm khai báo được sử dụng cũng cấp
+ thông tin về tên hàm và kiểu dữ liệu các tham số cũng như kiểu giá trị trả về của hàm trước khi thực hiện
+ định nghĩa hàm đầy đủ
+ -> Hàm nguyên mẫu prototype cho trình biên dịch biết về cấu trúc và cách sử dụng hàm trong chương trình.
+
+ ## Syntax: gọi call back lại tên hàm và các tham số là đc
+   <type><function_name>(parameters);
+
+   ==> nghĩa là trong C++ nếu function đặt trên hàm main thì bt không có gì để nói
+   Nhưng nếu nó đặt và khai báo sao hàm main, vậy khi thực thi trong hàm main mó
+   sẽ báo lỗi vì trình biên dịch cho rằng main cũng là một function và nó năm trên
+   nên nó đc khai báo trc gọi ngược hàm sau sẽ gây error!
+   ===> vì vậy việc khai báo hàm nguyên mẫu prototype sẽ giúp tránh lỗi cho th nay, khi tái 
+   định nghĩa hàm nguyên mẫu prototype thì dù khai báo function ở đâu khi gọi lại trong hàm
+   main cũng không gây ra lỗi
+
+
+   vd:
+           int sum(int a, int b){
+               return a+b;
+           }
+
+            int main(){
+               int a,b;
+               cout<<"nhâp: "<<endl;
+               cin>>a;
+               cout<<"nhap b: "<<endl;
+               cin>>b;
+
+               // gọi thực thi hàm sum
+               int tong = sum(a,b);
+               cout<<"tong la: "<<tong;
+               return 0;
+            }
+
+          ==> khi thực thi như thế này thì hoàn toàn bình thường không xảy ra lỗi gì
+          ===> nhưng nếu function được khai báo sau hàm main thì sẽ không gọi và thực
+          thi đc sum trong main, nó sẽ báo lỗi trình biên dịch.
+          ===> để khắc phục ta dùng hàm nguyên mẫu prototype để định nghĩa lại cho trình 
+          biên dịch biết về cấu trúc và cách sử dụng hàm trong chương trình.
+
+
+             vd: 
+                 
+               #include<iostream>
+               using namespace std;
+                
+                // khai báo hàm nguyên mẫu
+                int sum(int a, int b);
+
+                int main(){
+                   int a,b;
+                   cout<<"nhâp a: "<<endl;
+                   cin>>a;
+                   cout<<"nhap b: "<<endl;
+                   cin>>b;
+
+                   // gọi thực thi hàm sum
+                   int tong = sum(a,b);
+                   cout<<"tong la: "<<tong;
+                   return 0;
+                }
+
+                // function sum
+               int sum(int a, int b){
+                   return a+b;
+               }
+
+     
+
+
+      
+   

@@ -41,6 +41,10 @@ int main(){
     cout<<"nhap vao so luong phan tu mang: "<<endl;
     cin>>n;
 
+    /* lúc này khi gọi marg nó sẽ hiểu là arr có chữa tối
+       đa 100 dòng và phần thử thực tế là n phần tử đc nhập
+       từ bàn phím.
+    */
     cout<<"----------------------"<<endl;
     Nhapmang(arr, n);
 

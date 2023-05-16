@@ -64,7 +64,9 @@ int main(){
   int arr[ROW][COL];
   int row,col;
 
-  // gọi thực thi hàm Nhapmang và gán đối số của hàm main vao hàm Nhapmang
+  /* gọi thực thi hàm Nhapmang và gán đối số của hàm main vao hàm Nhapmang
+ --> nghĩa là giá trị mảng arr[1000][1000] có sức chứa mặc định là 1000/1000 nhưng phần tử thực tế phụ thuộc vào n phần tử được nhập từ bàn phím
+*/
   Nhapmang(arr,row,col);
   cout<<"-------------------------"<<endl;
   Xuatmang(arr, row, col);

@@ -1,0 +1,135 @@
+***********************CÁC PHƯƠNG THỨC LÀM VIỆC VỚI STRING**********************
+>>>>PHƯƠNG THỨC: SUBSTRING
+ - substring() là hàm cắt chuỗi từ vị trí mong muốn có điều kiện.
+ - syntax:
+        substring(<start_index>,<num_value>);
+        + trong đó;
+          ++ <start_index>: vị trí cần cắt chuỗi
+          ++ <num_value>: số ký tự cần cắt, cần lấy
+
+          vd:muốn cắt và in ra chư "phuc"
+          int main(){
+             string str = "huu phuc";
+             string str1 = str.substr(3,5);
+
+             cout<<str1;
+             return 0;
+          }
+          //->kw: "phuc"
+
+
+==========================================================================
+>>>> PHƯƠNG THỨC: FIND()
+- Phương thức find(): tiềm kiếm chuỗi và trả về vị trí chuỗi cần tiềm kiếm.
+- Synatax:
+       find(<value>):
+       + trong đó:
+         ++ <value>: chuỗi cần tìm kiếm trong chuỗi lớn
+
+         vd:
+         int main{
+            string str = "Huu phuc";
+            cout<<str.find("phuc");
+            // in ra chuỗi phuc và tiềm xem chuỗi "phuc" ở vị trí phần tử thứ mấy.
+            //-> kw: tìm ra "phuc" ở vị trí 4.
+         }
+
+
+
+===========================================================================
+>>>> PHƯƠNG THỨC: ERASE()
+ - Phương thức erase() là phương thức tẩy xóa chuỗi -> công dụng cóa đi n ký tự bắt đầu từ vị trí chỉ định
+ - Syntax:
+        erase(<index>,<num_value>);
+        + trong đó:
+          ++ <index>: vị trí muốn xóa
+          ++ <num_value>: số ký tự muốn xóa là bao nhiêu bắt đầu từ phần tử chỉ định
+          vd:
+
+          int main(){
+            string str = "Huu Phuc Aptech";
+            cout<<str.erase(8,7);
+            return 0
+            //kw: cắt bỏ chữ "Aptech" đi còn lai "Huu phuc".
+          }
+
+
+============================================================================
+>>>>PHƯƠNG THỨC: REPLACE()
+ - Phương thức replace() thay thế số lượng n phần tử bằng chuỗi s tại vị trí muốn thay thế x nào đó
+ - Syntax:
+      replace(<index>,<num_index>,<value>);
+       + trong đó:
+         ++ <index>: vị trí bắt đầu thay thế 
+         ++ <num_index>: số phần tử muốn thay thế, tức muốn thay thế bao nhiêu ký tự cần thay thế bởi chuỗi mới.
+         ++ <value>: giá trị cần thay thế đc chỉ định.
+
+
+         vd: thay thế "***" vào chỗ chỉ định
+         int main(){
+           string str ="Huuphuc";
+           /* thay thế uu thành ***: thay thế chuỗi "uu" từ vị trí 1, số
+            phần tử muốn thay đi là 2 chữ "uu". thay "uu" thanh "***".
+            */
+           cout<<str.replace(1,2,"***")'
+           retrun 0;
+           //kw: "H***phuc"
+             
+         }
+
+
+============================================================================
+>>>>> PHƯƠNG THỨC: COMPARE()
+ - Phương thức compare(): mang ý nghĩa so sánh chuỗi, so sánh chuỗi trả về giá trị true false.( 1 (> lớn hơn) 0(== trùng nhau bằng nhau) -1(< nhỏ hơn))
+ - Syntax:
+        compare(<string1>,<string2>);
+        + trong đó:string1 string 2 là các chuỗi cần so sánh.
+
+        vd: so sánh str1 và str2
+        int main(){
+           string str1 ="Huuphuc";
+           string str2 = "Huuphuc";
+
+           cout<<str1.compare(str2)'
+           retrun 0;
+          
+          //kw: 0  nghĩa là 2 chuỗi bằng nhau.
+        }
+          
+  
+
+>>>>> PHƯƠNG THỨC: INSERT()
+ - Phương thức insert(): chèn chuỗi muốn chèn vào vị trí chỉ định
+ - Syntax:
+      insert(<index>,<value>):
+        + trong đó:
+          ++ <index>: vị trí muốn chèn, thêm vào
+          ++ <value>: giá trị cần chèn
+
+          vd: chèn dấu ** vào vịt rí chuỗi mong muốn
+          int mainb(){
+             string str = "abcd";
+             cout<<str.insert(1,"**");
+
+             return 0;
+             //kw: "a**bcd";
+          }
+
+
+>>>>PHƯƠNG THỨC: LENGHT() AND SIZE()
+ - phương thức length() và size() trả về độ dài và kích thước của chuỗi
+ - Syntax:
+         length()
+         size()
+
+         vd: đo độ dài chuỗi
+         int main(){
+          string str1 = "Huu phuc";
+          cout<<str1.length()<<ednl;
+          count<<str1.size();
+
+          return 0;
+
+          /kw: đêu cho ra kích thước có 8 phần tử là 8 ký tự tương ứng bao gồm cả khoản trắng.
+         }
+

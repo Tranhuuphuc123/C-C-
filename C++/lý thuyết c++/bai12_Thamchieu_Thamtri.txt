@@ -1,0 +1,63 @@
+******************THÁM CHIẾU VÀ THAM TRỊ TRONG C++****************************
+>>>>> Khái niệm:
+ - tìm hiểu tham chiếu tham trị thông qua ví dụ cơ bản:
+
+   vd1:
+        // tạo function nhapmang
+           void Input(string label, int x){
+              cout<<label<<endl;
+              cin>>x;
+            }
+
+          //hàm function
+           int main(){
+              int n = 5;
+              // gọi function tự tạo
+              Input("nhap bien n: ", n);
+              cout<<"gia tri n la: "<<n<<endl;
+              return 0;
+           }
+
+           //--> kw: nhap n  = 6 kết quả biến n = 5 
+           --> lúc này cách truyền int x của function Input được gọi là tham trị
+           --> Truyền tham trị không ảnh hưởng đến giá trị biến n gốc
+
+     -----------------
+     vd2:
+       // tạo function nhapmang
+           void Input(string label, int &x){
+              cout<<label<<endl;
+              cin>>x;
+            }
+
+          //hàm function
+           int main(){
+              int n = 5;
+              // gọi function tự tạo
+              Input("nhap bien n: ", n);
+              cout<<"gia tri n la: "<<n<<endl;
+              return 0;
+           }
+
+           --> kww: nhập n = 6 -> kết quả xuất ra n = 6
+           ---> cách truyền với dấu & đc gọi là tham chiếu, đc hiểu là
+           cách lấy đối số của hàm phụ khởi tạo truyền vào function đc tạo trc đó
+           để truyền vào tham số đã đc khởi tạo ở function. cách này liên kết
+           giá trị biến n vừa nhập làm đối số truyền vào tham số int x ở function
+           làm cho gia trị đc thay đổi so với value gốc n = 5.
+
+
+>>>>>THAM CHIẾU: 
+ - Tham chiếu là cách truyền tham số trong lập trình, trong đó địa chỉ của biến được truyền và 
+ tham số được trỏ đến biến gốc.
+ - Khi một hàm hoặc phương thức được gọi và một tham chiếu được truyền vào, các thay đổi được thực
+ hiện trên biến gốc, và giá trị của biến gốc có thể thay đổi sau khi hàm hoặc phương thức kết thúc.
+---> Kết quả là tham chiếu cho phép chúng ta làm việc trực tiếp với biến gốc và thay đổi giá trị của nó.
+
+>>>> THAM TRỊ:
+ - Tham trị là cách truyền tham số trong lập trình, trong đó giá trị của biến được sao chép và 
+ gán cho một biến khác trong quá trình truyền tham số. 
+ - Khi một hàm hoặc phương thức được gọi và một tham trị được truyền vào, các thay đổi được thực hiện
+ trên bản sao của tham số, không ảnh hưởng đến giá trị ban đầu của biến gốc.
+---> Kết quả là giá trị của biến gốc không thay đổi sau khi hàm hoặc phương thức kết thúc.
+ 

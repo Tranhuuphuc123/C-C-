@@ -104,30 +104,37 @@
 
   6.1/MỘT SỐ LỆNH TẮT CMD TERMINAL:
      
-    ****************LỆNH TẮT CMD***************
-    - MỞ FILE: TRUY CẬP Ổ ĐĨA, vd: cmd> gõ  G: > cd  đg dẫn>enter
-    - Đang ở muc 1/2 mún quay lại mục 1 thay vì nhập lại từ đầu:ta nhấn cd ..
-    - tạo file.txt,.doc,.cpp...: type nul> tên file.txt/.doc/.cpp
-    --> muốn tạo nhiều file lượt thì: type nul> file1 file2...
-       + đối với git: touch tên file.txt/.doc/.cpp.java...
-       ---> tg tự mún tạo nhiều file lượt thì: touch file1 file2..
+                   ****************LỆNH TẮT CMD***************
+                      - MỞ FILE: TRUY CẬP Ổ ĐĨA, vd: cmd> gõ  G: > cd  đg dẫn>enter
+                      - Đang ở muc 1/2 mún quay lại mục 1 thay vì nhập lại từ đầu:ta nhấn cd ..
 
-    - tạo file văn bản .doc(word): copy con tenfile.txt  
+                      - tạo file.txt,.doc,.cpp...: type nul> tên file.txt/.doc/.cpp
+                      --> muốn tạo nhiều file lượt thì: type nul> file1 file2...
+                         + đối với git: touch tên file.txt/.doc/.cpp.java...
+                         ---> tg tự mún tạo nhiều file lượt thì: touch file1 file2..
 
-    - xóa file:  del   tên_file(.txt, .doc..)
-      --> xóa nhiểu file: cmd>del file1 fie2 file3 ..
-       + nếu dùng git: rm tên file.txt/.doc.cpp...
-       ---> tương tự muốn xóa nhiều file lượt thì rm file1 file2....
-      
-    - tạo thư mục folder: mkdir tên_folder
-    - xóa thư mục: cmd> rmdir  tên_folder>Y/N chọn Y.
-    - xem danh sách list:  dir /a
-       + nếu dùng git: ls
-       
-    - mở nhanh vscode: cmd> .code
-    - mở nhanh intelj: 
+                      - tạo file văn bản .doc(word): copy con tenfile.txt  
 
+                      - xóa file:  del   tên_file(.txt, .doc..)
+                        --> xóa nhiểu file: cmd>del file1 fie2 file3 ..
+                         + nếu dùng git: rm tên file.txt/.doc.cpp...
+                         ---> tương tự muốn xóa nhiều file lượt thì rm file1 file2....
+                        
+                      - tạo thư mục folder: mkdir tên_folder
+                      - xóa thư mục: cmd> rmdir  tên_folder>Y/N chọn Y.
+                      - xem danh sách list:  dir /a
+                         + nếu dùng git: ls
+                        
+                      - Sữa tên file:
+                         + Git: 
+                                    mv <tên_cũ> <tên_mới>
+                                     + vd:
+                                       mv bai01_abc.txt bai01_xyz.txt
+                                 
+                      - mở nhanh vscode: cmd> .code
+                      - mở nhanh intelj: 
 
+         *******************************************************************************
 
   7/ LỆNH SAVE, KHÔNG SAVE KHI THOÁT, VỪA SAVE VỪA THOÁT..
 

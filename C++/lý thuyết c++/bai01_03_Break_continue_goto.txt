@@ -1,0 +1,85 @@
+************************CÂU NGẮT KẾT THƯC DÒNG LÊNH: BREAK, CONTINUE, GOTO*****************
+>>>>>BREAK
+- Câu lệnh break trong C++ có hai cách sử dụng như sau:
+  + Khi gặp câu lệnh break trong một vòng lặp, vòng lặp bị kết thúc ngay lập tức và câu lệnh kế tiếp sau vòng
+  lặp được thực thi.
+  + Lệnh break có thể được sử dụng để kết thúc một case trong câu lệnh switch.
+
+    vd:
+       #include <iostream>
+           
+        using namespace std;
+          
+        int main () {
+            int a = 10;
+         
+            while( a < 20 ) {   
+                cout << "Gia tri cua a: " << a << endl;
+                a++;
+           
+                if( a > 15) {
+                    /* ket thuc vong lap khi a lon hon 15 */
+                    break;
+                }
+            }
+          
+           return 0;
+        } 
+
+=================================================================================
+>>>> CONTINUE        
+ - Câu lệnh continue trong C++ hoạt động giống như câu lệnh break. Thay vì buộc kết thúc vòng lặp, nó buộc trở
+ về kiểm tra điều kiện để thực hiện vòng lặp tiếp theo và bỏ qua các lệnh bên trong vòn lặp hiện tại sau lệnh continue.
+
+ - Đối với vòng lặp for, câu lệnh continue làm cho điều khiển chương trình tăng hoặc giảm biến đếm của vòng lặp.
+ - Đối với vòng lặp while và do-while, câu lệnh continue làm cho điều khiển chương trình quay về đầu vòng lặp và
+ kiểm tra điều kiện của vòng lặp.
+
+
+    VD:
+    int main(){
+      for(int i = 0;i< 10;i++){
+        if(i == 5){
+           continue;
+           // với i == 5 lúc này vòng lặp bỏ qua 5 luon mà inm tới 6 luôn
+        }
+        cout<<i<<endl;
+      }
+
+      return 0;
+    }
+
+    ===> nghĩa là bài trên: i chạy từ 0 1 2 3 4 5 6 7 8 9
+    ===> tuy nhiên ở đk i == 5 continue-> thì với continue nó sẽ bỏ qua vlue 5
+    để tiếp tục vòng for -<kw: 0 1 2 3 4 6 7 8 9
+
+
+===================================================================================
+>>>>> GOTO:
+ - Câu lệnh goto trong C++ cung cấp một bước nhảy vô điều kiện từ 'goto' đến một câu lệnh có nhãn trong cùng một hàm. ++> không khuyên nên sử dụng thường
+
+  vd: yêu câu nhập từ bàn phim giá trị phải là nguyên dương và chỉ chấp nhận số lẻ
+  tạo một nhãn dán để truy cập lại.
+
+      int main(){
+         int n;
+         // try_again là nhãn dán đánh dấu nhập lại sau dấu :
+         try_again:
+         cout<<"nhap n: "<<endl;
+         cin>>n;
+
+         if(n<=0 || n%2 ==0){
+           // đk nếu số nguyên âm hay số %2 tức số chẳn thì quay lại try_again nhập lại
+              goto try_again;
+         }Câu lệnh goto trong C++ cung cấp một bước nhảy vô điều kiện từ 'goto' đến một câu lệnh có nhãn trong cùng một hàm.
+
+         cout<<"gia tri n: "<<n;
+         return 0;
+      }
+
+      ===> qua bài toán ta thấy goto là câu lệnh nhảy, nhảy tới nhãn dán trong cùng hàm đã dc đánh dấu.
+      ===> khi đk thỏa gặp goto nó sẽ nhảy lại ngày nhãn dán đã đc đánh dấu
+      ===> kww: nếu nhập -3 4...nó sẽ quay lại try_again bắt nhập lại
+                nếu nhập số lẻ 3  thì không thỏa đk if thoát khỏi và tiến hành in ra n = 3.
+
+        

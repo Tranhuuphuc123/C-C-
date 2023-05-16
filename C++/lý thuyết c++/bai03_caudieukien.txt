@@ -1,5 +1,5 @@
 *****TÌM HIỂU VỀ CÂU ĐIỀU KIỆN IF ELSE VÀ SWITCH CASE TRONG C++*****
->>> THU VIỆN math
+>>> THU VIỆN math: #include<cmath>
 
 thư viện math.h, là thư viện khai báo để học các hàm toán học trong lập trình C++:
 

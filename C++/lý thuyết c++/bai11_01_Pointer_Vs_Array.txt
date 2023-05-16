@@ -1,0 +1,117 @@
+********************************TIỀM HIỂU POINTER CON TRỎ VỚI ARRAY****************************
+>>>> KHÁI NIỆM:
+ -  Mnagr 1 chiều:
+     int arr[4] ={5, 8, 2, 7};
+     -> nhìn vào đây ta biết đc arr là mảng 1 chiều kiểu int có 4 số nguyên 5 8 2 7 có tổng 
+     giá trị là 16byte ~ 128bit
+     -> nhưng lại không rõ arr chứa hay arr[n] nó chưa bộ nhớ địa chỉ là gì?
+
+     vd1:
+          int main()
+          {
+            int array[4] = { 5, 8, 2, 7 };
+
+            // in giá trị của biến array, lưu ý khoogn chỉ rõ pt mảng nên không in đc value
+            cout << "The array has value: " << array << '\n';
+
+          // in địa chỉ của biến array
+          cout << "The array has address: " << &array << '\n';
+
+          // in địa chỉ của phần tử array[0]
+          cout << "Element 0 has address: " << &array[0] << '\n';
+
+          system("pause");
+          return 0;
+        }
+        --> trong ví dụ này toán tử & lấy đc địa chỉ bộ nhớ của mảng
+        --> kw: tất cả đều in ra: "012FF9A0" tức địa chỉ vùng nhớ giống nhau.
+        ==> nó hoạt động gần như y như con trỏ?
+
+
+      -----
+      vd2:
+            int main()
+            {
+              int array[4] = { 5, 8, 2, 7 };
+
+              // toán tử trỏ (*) trả về giá trị phần tử đầu tiên: array[0]
+              cout << *array << '\n'; // int ra 5
+
+              // khai báo con trỏ ptr trỏ vào mảng array
+              int *ptr = &array;
+              cout << *(ptr) << '\n'; //int ra 5
+
+              char name[] = "Kteam"; // C-style string (mảng char)
+              cout << *name << '\n'; // int ra ký tự đầu tiên K
+
+              system("pause");
+              return 0;
+            }
+            --> trong ví dụ này toán tử con trỏ * và lấy đc phần tử đâù tiên của mảng
+
+    =========> nhìn chung thoạt tưởng rằng array và con trỏ  gần như là không khác nhau tuy nhiên.
+    chúng thật sự khác nhau:
+
+     ====================
+      vd3: 
+          int main()
+          {
+            int array[4] = { 5, 8, 2, 7 };
+
+            cout << typeid(array).name() << '\n';
+            cout << sizeof(array) << '\n';
+
+            int *ptr = array;
+            cout << typeid(ptr).name() << '\n';
+            cout << sizeof(ptr) << '\n';
+
+            system("pause");
+            return 0;
+          }
+
+          --> kw:
+                  + mảng: in ra int [4]
+                           16
+                         ---> nhìn vào đây ta thấy mảng có 4 phần tử int ~16byte
+                   + con trỏ *ptr:
+                           in ra int *
+                            4
+                           ---> biết là con trỏ nhưng không biết có nhiều phần tử
+                           biết có 4byte tg đương với giá trị đầu tiên của mảng mà thui
+
+
+    *********==> vì vậy sử dụng mảng một chiều thì biết chính xác số phần tử còn con trỏ thì không.
+
+
+
+
+
+
+ ==========================================================================
+ >>>>>>>>>>TRUYỀN MẢNG VÀO HÀM<<<<<<<<<<<<<<<<
+ - cách truyền mảng vào function đã đc học giờ ta sẽ hiểu đc vai trò của con trỏ với mảng là như thế nào
+
+  vd:
+          // tạo một function và truyền vào một con trỏ *array
+          void printSize(int *array)
+          {
+            // tham số array là con trỏ int*
+            cout << sizeof(array) << '\n'; // kích thước con trỏ int*, không phải kích thước mảng
+          }
+
+          int main()
+          {
+            int array[] = { 5, 8, 2, 7 };
+            cout << sizeof(array) << '\n'; // kích thước mảng: sizeof(int) * array length
+
+              // gọi thực thi function
+            printSize(array); // đối số array được chuyển thành con trỏ int* tại đây
+
+            system("pause");
+            return 0;
+          }
+           ---> kw:main(): cout<<sizeof(arr): 16 byte đơn giản mảng bt thì biết đc số lượng pt mảng
+                          printSize(array): đối số array lúc này đc tham chiếu vào
+                          đã trở thành một con trỏ-> nó chỉ lấy đc giá trị đầu của mảng : 4byte
+                  
+

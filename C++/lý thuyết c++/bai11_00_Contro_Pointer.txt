@@ -1,0 +1,105 @@
+******************CON TRỎ POINTER TRONG C++*******************
+>>>TOÁN TỬ ĐỊA CHỈ(&)
+ - Cùng quay lại Biến Variable một tí:
+   vd:  int a = 100;
+     + thì 100 là giá trị ta gán cho biến.
+     + còn a là tên biến: là tên của một vùng nhớ trong bộ nhớ RAM hiện diện với cái tên 'a'
+     ---> a là tên đại diện của địa chỉ biến trên vùng nhớ Ram xuất hiện trên chương trình thui
+     chứ thực chất địa chỉ gốc của a đc định danh là một giá trị thập lục phân vd: 0x0256..
+     ===>Giá trị lưu trữ cho địa chỉ vùng nhớ biến a đc lưu dưới dạng thập lục phân(0123..ABCDEF), để lấy được địa chỉ
+     của vùng nhớ của biến ta dùng toán tử '&'.
+
+          +vd:
+              int main(){
+              // khai báo biên n có value là 4
+                 int n=4;
+               // tuy nhiên n là tên địa diện đĩa chỉ biến n thui
+               // giờ lấy tên địa chỉ gôc trong bộ nhớ Ram của máy
+
+               cout<<&n;
+               return 0:
+
+               --> kw:  n = 0x6ffe14...đây mới là địa chỉ mà máy cấp cho biến n để
+               dẫn đến nới lưu trữ value 4.
+              }
+
+
+>>>> TOÁN TỬ CON TRỎ (*):
+ - Con trỏ được khai báo với toán tử con trỏ là dấu "*" cho phép ta truy cập get/set tại một địa chỉ cụ thể 
+
+   vd:
+        #include <iostream>
+        using namespace std;
+
+        int main()
+        {
+
+          int x = 10;
+          // xuất giá trị x = 10;
+          cout << x << '\n'; 
+          // xuất địa chỉ vùng nhớ gốc của biến trong bn Ram là x = "0058FE68"
+          cout << &x << '\n';    
+          // dùng toán tử point * để trả về (get) giá trị của biên x = 10;
+          cout << *&x << '\n'; 
+          
+          // thiết lặp(set) giá trị mới có chon trỏ của biến x = 20
+          *&x = 20;
+          cout << x << '\n'; // = 20x
+
+          return 0;
+        }
+   
+==> thông qua hai toán tử & và * ta hiểu rõ biến là gì, địa chỉ vùng nhớ của biến là ntn
+ và cách lấy địa chỉ của biến cũng n"0058FE68"
+hư dùng toán tử * để get/set value của con trỏ biến
+==> cùng đi tiềm hiểu rõ con trỏ pointer thật sự là gì?
+
+
+
+**************************************************************************************>>>>> CON TRỎ POINTER:
+ ## kHÁI NIỆM:
+  - Con trỏ pointer là một biến chứa một địa chỉ bộ nhớ làm giá trị của nó.
+  ==> ta có thể dùng đại chỉ vùng nhớ của một biến nào đó gán cho con trỏ vừa khởi tạo
+  ==> con trỏ với toán tử * có thể get trả về địa chỉ vùng nhớ của biến đc gán hay thiết lặp set value mới.
+
+ ## Khai báo con trỏ Pointer:
+   <types> <*Point_name>;
+     vd: 
+       int *a
+       double *b
+       .....
+
+       vd: khai báo biến n = 4;
+       khai báo một con trỏ và gán giá trị vùng nhớ của biến n cho con trỏ
+
+           int main(){
+            int n = 4;
+            //khai báo con trỏ và gán địa chỉ vùng nhớ n cho con trỏ dó
+            int *i_ptr = &n;
+            cout<<i_ptr;
+            return 0;
+
+            /*-->kw: biến n có giá trị vùng nhớ:"0058FE68" sẽ đc gán cho con tro i_ptr = "0058FE68"
+             vậy cout<<i_ptr ="0058FE68".*/
+
+             // ta tiến hành dùng toán tử * để trả về giá trị biến con trỏ, &n gán cho i_ptr -> mún xem nó có giá trị là nhiêu
+             cout<<*i_ptr<<endl; // kw: 4
+
+             // tiên hành set thay đổi value cho biến con trỏ
+             *i_ptr = 10;
+             cout<<*i_ptr<<endl;
+             cout<<n;
+             //--> kw: i_ptr =10
+                        n = 10; vì địa &n đã đc gán cho i_ptr nên có cùng địa chỉ khi thay đôi vlue thì cả 2 
+                        sẽ cùng thay đổi vì có 1 địa chỉ thui.
+           }
+
+  ************************
+  ************************
+  ************************
+  ************************
+       *****NOTE: 
+           int *ptr =&n;
+           cout<<ptr; // in là in cái địa chỉ vùng nhớ của ptr: vd: 0x122xxx
+           cout<<*ptr;  // in là in cái value đc gán cho địa chỉ bộ nhớ biến con trỏ
+

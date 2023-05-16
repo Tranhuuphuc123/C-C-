@@ -59,8 +59,27 @@ hoặc chạy code với terminal:
 
 
             
+>>>> ÉP KIỂU TRONG C++:
+- Có 2 loại ép kiểu:
+ + 1/Nới rộng (widening): Hay con gọi là ép kiểu ngầm định, nghĩa là ép từ kiểu dữ liệu có kích thước nhỏ -> lớn
+  vd: short->int->float->long->double
+     
+         int i = 100;
+         float j = i
+         ==> ta hiểu là j = i là 100.0 kiểu double
+
+  
+
+  + 2/Thu hẹp (narrowwing): Hay còn gọi là ép kiểu tường minh, ép kiểu từ những kiểu dữ liệu lớn hơn về kiểu dl bé hơn. Để 
+  tránh mất dữ liệu do bị trán bộ nhớ ta cần khai báo kiểu ép rõ ràng tường minh
+    vd:double->long->float->int->short...
+
+        float i = 25.5;
+        int a = (int) i
+        ==> đữa i = a=25 kiểu số nguyên
 
 
+  
 
    
 		
