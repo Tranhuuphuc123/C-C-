@@ -11,6 +11,21 @@
  >> xuống dòng trong C++: std::endl; hoăc "\n".
  -- nếu khai báo using namespace std; thì có thể bỏ qua std::endl>>.. thành <<endl or >>endl;
 
+
+***************************************************************************
+>> DÙNG GETLINE,.. THAY THẾ CIN>>
+ - trong lập trình c++, mún gán giá trị Input ta dùng cin>>
+ => tuy nhiên nếu cin>> gặp dãng value là chuỗi thì nó chỉ đọc đc toi khoảng trắng thui
+ vì thế với các value là Sring.. nó sẽ gặp trở ngại
+ => để giải quyết ta dùng getline
+    vd:
+    String a;
+
+      cout<<"nhạp vao gia tri chuoi a ";
+      getline(cin, a);
+
+      .....
+
 ---------------------------------------------------------------------------------
 >>>>>>>>ĐỊNH DẠNG DỮ LIỆU NHẬP XUẤT TRONG C++
  - Trong C++, bạn có thể định dạng dữ liệu nhập xuất cho thiết bị nhập xuất chuẩn---> hiểu đúng hơn là hiển thị giá trị sắp theo chỉ đinh: xuất ra kiểu một văn bản, một table, hay một sắp xếp có bố cục... Chứ không đơn thuần 1 mọt dòng xuất đươn giản là xong.

@@ -1,0 +1,118 @@
+/*------------CẤP PHÁT BỘ NHỚ ĐỘNG-DYNAMIC MEMORY----------------------------*/
+>>>>>>KHÁI NIỆM:
+ ## TIỀM HIỂU VỀ STACK
+  - STACK(ngăn xếp) là một vùng nhớ quản lý theo nguyên tắc "LIFO" (Last-In -> First-Out).
+  nghĩa là phần tử cuối đữa vào stact sẽ được lấy ra đầu tiên
+  - Stack hỗ trợ biến cục bộ (Local Variables)
+  - Quản lý Stack là tự động, nhanh chóng và hiệu quả -> nên Stack là phổ biến trong việc
+  lưu trữ các biến cục bộ và frame của hàm
+
+
+  ##TIỀM HIỂU VỀ HEAP(Đống):
+   - Heap là một vùng nhớ quản lý linh hoạt và có thể cấp phát động để lưu trữ các đối tượng có kích
+   thước lớn hoặc đói tượng tồn tại trong một khoảng thời gian dài
+   - Để cấp phát bộ nhớ trên heap ta dùng từ khóa "new".
+   - Để giải phóng bộ nhớ Heap đã cấp trc đó ta dùng toán tử "delete"
+   - Heap hỗ trợ đa phần cho biến toàn cục và gán con trỏ
+   - Heap quản lý không đc tự động phải cẩn thận,quản lý bằng tay.
+
+   ===> so sánh thì stack nhanh hơn, stack kích thước nhỏ hơn heap...
+
+
+
+   ========================================================
+   >>>>CẤP PHÁT ĐỘNG(DYNAMIC MEMORY):
+    - Cấp phát động trong c++(Dynamic memory allocation) là cách để yêu cầu bộ nhớ
+    từ hệ điều hành khi cần thiết
+    - Cấp phát bộ nhớ động sử dụng vùng nhớ được quản lý bởi hệ điều hành gọi là "Heap".
+
+    -------------------------------
+    #### CẤP PHÁT ĐỘNG CHO BIẾN ĐƠN:
+     - Để cấp phát động cho một biến ta dùng từ khóa "new".
+
+              new int     //cấp phát động cho số nguyên
+              ......v.v..
+
+      - Để truy cập cấp phát động của một số(cụ thể đây là cấp phát động của số nguyên).
+      ta dùng con trỏ để lưu trữ địa chỉ bởi toán tử "new"
+      --> đúng hơn là gán vùng nhớ cấp phát cho con trỏ
+        
+             int *ptr = new int    // gán cấp phát bộ nhớ động số nguyên cho con trỏ
+             *ptr = 10;            // gán value 10 cho vùng nhớ đc cấp phát
+
+
+      - có thể cùng lúc khởi tạo cấp phát động cho một biến và gán cho con trỏ:
+
+            int *ptr1 = new int(10);
+            int *ptr2 = new int{ 20 };
+      
+
+
+     -------------------------------------
+     ##### GIẢI PHÓNG BỘ NHỚ ĐÃ CẤP PHÁT(xóa các biến đơn)
+      - Khi chúng ta không còn sử dụng một biến được cấp phát động, chúng ta cần trao quyền
+      quản lý vùng nhớ đó lại cho hệ điều hành
+      ---> điều này đc thực hiện thông qua toán tử "delete"
+
+                  vd:
+
+                       int *ptr = new int;     // cấp phát động cho số nguyên và gán cho con trỏ ptr.
+
+                       delete ptr             // trả lại, giải phóng bộ nhớ ptr trả lại cho hệ điều hành
+                       ptr = value;           // gán lại giá trị #
+
+                       ======> toán tử "delete" nó không xóa bất cứ cái gì đơn cử đc hiểu là nó đang
+                       trao quyền sử dụng vùng nhớ đc cấp phát cho hệ điều hành.
+                       --> sau đó hệ điều hành sẽ phân bổ cấp phát lại cho một đối tượng #.
+
+
+      ---> lưu ý rằng khi cấp phát bộ nhớ động và gán cho con trỏ
+      liên tục nhiều lần, hay gán cho giá trị # sau khi đã gán cho con trỏ 
+      thì nó dễ bị rò rỉ bộ nhớ
+
+                    int *ptr = new int;     // gán cấp phát bộ nhớ dộng số nguyên cho con trỏ lần 1
+                    ptr = new int;          // tiếp tục gán lại lần 1->địa chỉ vùng nhớ cấp phát trước 
+                    đó bị mất, rò rỉ bộ nhớ
+
+                  => để khắc phục thì toán tử "delete" giải phóng bộ nhớ đã cấp phát là một cách để trị nó.
+                    
+                    int *ptr = new int;
+                    delect ptr;            // ta tiến hành giải phóng bộ nhớ cái trc rồi hả gán lại.
+                    ptr = new int;         // địa chỉ vùng nhớ cấp phát trước đó bị mất, rò rỉ bộ nhớ
+              
+
+
+
+
+########ví dụ code:
+
+                #include <iostream>
+                using namespace std;
+
+                int main()
+                {
+                  // cấp phát động một số nguyên và gán địa chỉ cho con trỏ ptr nắm giữ
+                  int *ptr = new int;
+                  *ptr = 10; // gán 10 vào vùng nhớ được cấp phát
+
+                  // truy cập vùng nhớ ptr đang trỏ tới 
+                  cout << *ptr;   //--> kw: 10
+ 
+                  // giải phóng vùng nhớ cho hệ điều hành, ptr đang là con trỏ lơ lửng
+                  delete ptr; 
+                  
+                  // cấp phát lại cho đối tượng #
+                  ptr = new int;
+                  *ptr = 20;
+
+                  // truy cập vùng nhớ ptr đang trỏ tới 
+                  cout << *ptr;   //kw: 10
+                  
+                  return 0;
+                }
+                   
+
+     
+
+
+               

@@ -1,7 +1,7 @@
 *****************CÁC BƯỚC CÀI ĐẶT VIM C/C++***************************
 >>>> Các bước: tham khảo : https://www.youtube.com/watch?v=Tp8i1EHsQ1Q&t=1597s
  - b1/ tải neovim: phiển bản neovim Qt cho windowwn:
-    
+  
  - b2: tiến hành download Vim_config (init.vim)-> lấy link github: https://github.com/VuNguyenCoder/VimConfig
  - b3: tiến hành tải và liên kết python, nodejs,..với nevim thông qua lệnh code cmd 
     + install Nodejs:
@@ -52,7 +52,7 @@
     - thực hiện câu lệnh: shift :
     
 
-    
+    
   1/ TIỀM KIẾM TỪ(SEARCH TỪ):
    - NHẬP / 'nội dung từ cần tiềm kiếm'
    - bôi đen từ muốn tìm kiếm bằng visual; 
@@ -155,8 +155,9 @@
 
        Shift : NERDTree G:\PRATICE_CODE
      
-     - Reload lại chương trình project/fileWord: Giả dụ vừa mở Project lên tuy nhiên có cập nhật file mới để load lại Project thì
-     nhần:
+     - Reload lại chương trình project/fileWord: Giả dụ vừa mở 
+     Project lên tuy nhiên có cập nhật file mới để load lại
+     Project thì nhần:
            NERDTreeRefresh.
       
      - Muốn ẩn Project/file: NERDTreeClose 
@@ -241,4 +242,7 @@
         - paste dong:
          nhấn p 
 
-           
+          
+
+
+             

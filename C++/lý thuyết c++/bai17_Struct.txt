@@ -1,0 +1,99 @@
+/**************************TIỀ HIỂU VỀ STRUCT TONG LẬP TRÌNH C++************************/
+>>>KHÁI NỆM:
+ - Struct hiểu đơn giản là kiểu dữ liệu do người dùng tự định nghĩa
+ - struct sẽ thg đc khai báo ử hàm nguyên mãu Prototype trc hàm main
+ - khi khai báo với struct thì nên dùng từ khóa Struct trc tên 
+ - lưu ý nên có dấu ; sau khi khai báo struct
+   vd:
+      
+        struct Student{
+             string name;
+             int age;
+          };
+=====> nói cho đúng hơn struct thực chất là class của các ngôn ngữ như java...
+===> ở structs ta có thể khai báo properties, contrcutors.. method, get/set...
+và dùng nó để làm kiểu dữ liệu cho một biến khác(gọi là kiểu dữ liệu tự
+định nghĩa)
+
+===> do nó là một class ta có thể gan giá trị bằng cách dùng get/et, truyền đối đối số thông qua contrucotr....
+
+
+
+>>>>>code minh họa đơn giản về structs
+
+          #include<iostream>
+          #include<string>
+          using namespace std;
+
+          /* hàm nguyên mẫu prototype*/
+          // tạo structs date
+          struct Date{
+             int date, month, year;
+             // contructor
+             Date(){}
+             Date(int _date, int _month, int _year){
+               date =_date;
+               month = _month;
+               year = _year;
+             }
+          };
+
+
+          // tạo kiểu dữ liệu với Struct
+          struct Student{
+             string name;
+             int age;
+             // dùng Date làm kiểu dl cho date của Struct Student
+             Date dob;
+             // contrutor
+             Student(){}
+             Student(string _name, int _age, Date _dob){
+               name = _name;
+               age = _age;
+               dob = _dob;
+             }
+
+             // xây dựng method trong Struct
+             void run(){
+               cout<<"method cua struct"<<endl;
+             }
+          };
+
+
+
+          /*hàm chính main*/
+          int main(){
+
+           //****************CÁCH 01***************************
+            // dùng Struct định nghĩa kiểu dl cho biến trong main
+            Student student1;
+
+            cout<<"nhap ten cua stduent 1: ";
+            getline(cin, student1.name);
+
+            cout<<"nhap tuoi cua student 1: ";
+            cin>>student1.age;
+
+            // xuất giá trị
+            cout<<"ten cua student1 la: "<<student1.name<<endl;
+            cout<<"tuoi cua student1 là: "<<student1.age<<endl;
+           
+          // gọi đến method của struct
+            student1.run();
+
+           //****************CÁCH 02***************************
+            // gọi và truyền kiểu gáng đối số trong contructor
+            Student student2("Tuan", 22, Date(1,9,2000));
+            cout<<"ten student2: "<<student2.name<<endl;
+            cout<<"tuoi student2: "<<student2.age<<endl;
+            cout<<"ngay/thang/namsinh cua student2: "<<student2.dob.date<<"/"
+              <<student2.dob.month<<"/"<<student2.dob.year;
+
+
+            return 0;
+
+          }
+
+
+
+

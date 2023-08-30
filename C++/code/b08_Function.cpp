@@ -13,7 +13,7 @@ void printValue(){
 }
 
 // function không kiểu trả về void, nhưng  có tham số truyền vào
-ivoid tong(int x, int y){
+void tong(int x, int y){
   int tong = x + y;
   // lưu ý với void là không có giá trị trả về nên không dung return đc
   cout<<"tong: "<<x<<" + "<<y<<" = "<<tong<<endl; 

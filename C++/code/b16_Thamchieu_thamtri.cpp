@@ -16,7 +16,8 @@ void thayDoiThamChieu(int &x) {
 }
 
 int main() {
-    int a = 5;    cout << "Giá trị ban đầu của a: " << a << endl;
+    int a = 5;   
+    cout << "Giá trị ban đầu của a: " << a << endl;
 
     // Gọi hàm thayDoiThamTri với tham trị
     thayDoiThamTri(a);
