@@ -40,7 +40,7 @@ int main(){
    new_arr[3] = 2;
 
    // lúc này cần xóa bỏ đi các giá trị mảng động cũ để hđh cấp phát lại vùng nhớ
-   delete[] arr;
+ :  delete[] arr;
 
    // gán lại vùng nhớ mới(đại diện con trỏ new_arr) cho con tro arr
    arr = new_arr;

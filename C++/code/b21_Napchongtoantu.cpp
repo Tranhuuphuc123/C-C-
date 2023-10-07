@@ -1,5 +1,5 @@
 /*Tiềm hiểu về nạp trồng toan tử trong c++
-==> tông thường nếu mún gán giá trị khi nhập ta dùng cin>>
+==> thông thường nếu mún gán giá trị khi nhập ta dùng cin>>
 ==> tuy nhiên với struct các kiểu dữ liệu tự định nghĩa thì diều
 đó nó không hiểu
 ==> Nạp chồng toán tử là phương thức giải quyết

@@ -1,4 +1,4 @@
-/**************************TIỀ HIỂU VỀ STRUCT TONG LẬP TRÌNH C++************************/
+/**************************TIỀM HIỂU VỀ STRUCT TONG LẬP TRÌNH C++************************/
 >>>KHÁI NỆM:
  - Struct hiểu đơn giản là kiểu dữ liệu do người dùng tự định nghĩa
  - struct sẽ thg đc khai báo ử hàm nguyên mãu Prototype trc hàm main

@@ -71,7 +71,7 @@
 
   4/ Mở terminal chạy code:
     - cmd truyền thống:
-      Shift: Terminal hoặc term  
+      Shift: Terminal hoặc term 
     - Nhập:
       + Shift : FloatermNew
     - muốn truy cập đúng file/ project mong muốn
@@ -86,7 +86,7 @@
   6/ QUẢN LÝ FILE, TAB, MONITOR MÀN HÌNH
     - MỞ FILE:
         shift : e <tên file.cpp>
-        ==> note: khi mở file lên thì ta code và lưu thay đổi sau khi code xong
+        ==> note: khi mở file lên thì ta code và lưu thay đổi sau khi code xodeng
      - TRỞ VỀ THƯ MỤC CHA
        Shift : cd
      - tắt file: thay vì mỗi lần Shift :q  thì ta close file thui băng
@@ -132,7 +132,14 @@
                                        mv bai01_abc.txt bai01_xyz.txt
                                  
                       - mở nhanh vscode: cmd> .code
-                      - mở nhanh intelj: 
+                      - mở nhanh intelj:
+                      - Dọn sách màn hình trên terminal/Git bash
+                        + terminal:
+                           Gõ:  cls
+
+                        + Git Bash:
+                          Gõ: clear
+
 
          *******************************************************************************
 
