@@ -1,0 +1,107 @@
+*************************KHÁI NIỆM VỀ THUẬT TOÁN*******************
+>>>>>Khái Niệm:
+ - Khái niệm thuật toán là gì?
+  =>  Thuật toán hiểu nôm na là tập hợp các bước, các phép toán cơ bản được sắp xếp
+  trình bài theo một trình tự nhất định, để từ thông tin đầu vào của một bài toán
+  sau một tập hữu hạn ở các bước đó sẽ đạt được kết quả đầu ra như mong muốn.
+  => thuật toán sinh ra để giải quyết các vấn đề, các bài toán cùng thể loại tương 
+  tự nhau
+  => nó có hai thành phần chính để đưa ra thuật toán giải quyết
+   + dữ liệu đầu vào Input
+   + kết quả đầu ra: Output
+
+     vd:
+        tính diện tích S = a.b
+        -> input: giá trị a, b
+        -> output: kết quả S, hoặc câu thông báo lỗi chẳng hạn...
+
+        
+====================================================================================================
+>>>>>>TÍNH CHẤT CỦA THUẬT TOÁN<<<<<
+  1/ tính dừng
+    -> Thuật toán hay một bài toán khi triển khai phải đám bảo có bước kết thúc 
+   không để cho code chạy thành một vòng lặp vô hạn không điểm dừng.
+
+  2/ tính xác định:
+   -> Các bước trong thuật toán cần được chỉ rõ ràng cụ thể, tránh mập mờ hông có ý nghĩa
+   vd:
+    + lấp ds sp (mơ hồ quá)
+    -> lập ds thì cần rõ: tên, mô tả, xuất xứ, giá.....
+    .....
+
+  3/ tính đúng:
+   -> phỉa đảm bảo đc khi thực thi bài toán thì các bước cho ra đc kết quả mong muốn
+
+  4/ đầu vào đầu ra(input/output):
+   -> Mọi bài toán đều có dl vào và vào đc thì phải đảm bảo ra đc
+
+  5/ tính hiệu quả(effectivesness):
+   -> Mọi bài toán có nhiều hg giải khác nhau, có nhiều cách khác nhau. NHưng phải đảm 
+   bảo nó hiệu quả mang lại kết quả tốt.
+
+  6/ tính tổng quát(generalliness):
+   -> Tính tổng quát là nó phải đc ứng dụng cho đc các bài toán khác nhau, tránh việc
+   chỉ ứng dụng đc cục bộ một chỗ nào đó -> dễ bị động và gây không hiệu quả
+
+
+
+
+======================================================================================================
+>>>>>>>>>CÁC CÁCH BIỂU DIỄN THUẬT TOÁN<<<<<<<<<<<<<<
+=> một là biểu diễn bằng cách liệt kê
+(tức là ghi ra nd này cần làm gì bao nhiều bước, bước 01 làm sao, b2 làm sao...)
+
+=> Biểu diễn bằng sơ đồ vẽ ra khối giải thuật ấy
+(này dùng drawio, figma để vẽ đồ ấy)
+
+=> Biểu diễn thuật toán bằng mã giả:
+ +nghĩa là: dùng các ngôn ngữ ký hiệu(pascal, c..) để biểu diễn thuật toán
+   vd:
+      Nhập n
+      i:=0
+      s:=0
+      REPEAT
+        s=s+i
+        i=i+1
+      UNTIL(i>n)
+      xuất s
+
+      ==> kiểu này khá khoog quen lắm
+        
+
+
+
+==============================================================================
+>>>>>>CÁC CẤU TRÚC CỦA THUẬT TOÁN<<<<<<<<<<
+- Như đã đc làm quen khi học môn sơ đồ khối, ta ve các sơ đồ thuật toán thì
+có các dạng cấu trúc như
+
+ ## cấu trục tuần tự
+  -> Dễ hiểu là cấu trúc có sự sắp xếp rõ ràng tuần từ từ trên xuống,.. từ 
+  bước 01 tới bước 02 --> tới bước n.
+
+ ## Cấu trúc rẽ nhánh:
+  - Đối nghịch với tuần tự thì có rẻ nhánh, vd như đk đúng thì xuất ra kw ngay
+  nhưng nếu đk sài quay lại bước đầu xét lại hoặc thoát ctrinh luôn.
+  - Nó không tuân theo quy tắc đề dễ bề kiểm soát các th khác nhau
+
+
+ ## Cấu trúc lặp
+  -> nó cũng gần cấu trúc đk
+  -> vd đk xét không đạt quay lại bc đầu cho đến khi đạt mới cho qua
+  -> vd như đk không đật thị bỏ nó qua xuất ra luôn thông báo lỗi
+
+
+
+ ===================================================================================================
+ >>>>>>>>>>>>>>CÁC THUẬT TOÁN CƠ BẢN<<<<<<<<<<<<<<<<<<<<
+ ## 01: THUẬT TOÁN IN DÃY SỐ
+ ## 02: THUẬT TOÁN TÍNH TỔNG DÃY SỐ
+ ## 03: THUẬT TOÁN TÍNH TÍCH DÃY SỐ
+ ## 04: THUẬT TOÁN TIỀM KIẾM MỘT SỐ CÓ TROG DÃY SỐ
+ ## 05: THUẬT TOÁN ĐẾM SỐ LƯỢNG PHẦN TỬ THỎA MÃN ĐIỀU KIỆN
+ ## 06: THUẬT TOÁN TÌM GIÁ TRỊ MAX, MIN
+ ## 07: THUẬT TOÁN SẮP XẾP TĂNG GIẢM
+ .....
+
+
